@@ -1,6 +1,8 @@
 # Troop 53 Scout Guide
 
-An offline Android field guide for the Scouts of Troop 53. **Built by Benjamin Doktor.**
+An offline Android and iOS field guide for the Scouts of Troop 53. **Built by Benjamin Doktor.**
+
+The native iPhone/iPad app lives in [`ios/`](ios/README.md). Open `ios/Troop53Guide.xcodeproj` in Xcode; it uses SwiftUI and Apple frameworks, with the same guide text, quiz, and illustrations as Android. iOS 16 or newer is required. The [iOS workflow](https://github.com/doktorigi/troop53-guide/actions/workflows/ios.yml) builds and tests it on macOS; phone installation requires Apple signing through Xcode or TestFlight.
 
 - 15 sections, 100+ guides: Scout Basics (Oath, Law, motto, ranks, patrol method), First Aid (hurry cases, CPR, bleeding, burns, heat/cold, bites and stings…), Camping, Camp Cooking, Fire, Knots & Lashings, Navigation, Hiking, Survival, Weather & Nature, Water Safety, Woods Tools, Leave No Trace, Flag & Citizenship, Emergency Prep
 - Emergency card on the home screen: Call 911, Poison Control, Hurry cases, CPR, Bleeding
@@ -13,7 +15,7 @@ Unofficial — not published or endorsed by Scouting America. First aid content 
 
 Get the illustrated Android app from [GitHub Releases](https://github.com/doktorigi/troop53-guide/releases/latest). Download `Troop53-Scout-Guide.apk`; `SHA256SUMS.txt` records its checksum. This is a debug-signed build, matching the app tested on the Pixel. The private repository and downloads require access to this GitHub repository.
 
-## Build
+## Build Android
 
 ```
 set JAVA_HOME=C:\Program Files\Android\Android Studio\jbr

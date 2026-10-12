@@ -16,3 +16,12 @@ art/preview/
 .env
 .env.*
 !.env.example
+ios/DerivedData/
+ios/DerivedData-device/
+ios/TestResults/
+ios/*.log
+ios/*-simulator.zip
+**/xcuserdata/
+*.xcuserstate
+*.xcresult/
+*.ipa

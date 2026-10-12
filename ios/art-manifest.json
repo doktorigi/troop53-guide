@@ -1,0 +1,548 @@
+[
+  {
+    "source": "art/svg/camping/layout.svg",
+    "sha256": "46d22d64decf842d554ed168d5efcfc4aa91d7a0bcb0bebd4998f860c49e4f13",
+    "output": "ios/Troop53Guide/Resources/Illustrations/camping/layout.pdf",
+    "outputSha256": "75224e44040d75a31232f792259bbe0eefcd0d8706b82cddf877baae4f09c3f9"
+  },
+  {
+    "source": "art/svg/fire/drown-stir-feel.svg",
+    "sha256": "559d4e31fa8f7e5e79d3ff87e16d2e9809406acf65e60e04be4636a881778967",
+    "output": "ios/Troop53Guide/Resources/Illustrations/fire/drown-stir-feel.pdf",
+    "outputSha256": "4dbf29baf7787bacec0a74b24d39274086a1881e63cd08d6d98b3718bbafc197"
+  },
+  {
+    "source": "art/svg/fire/lays.svg",
+    "sha256": "7cb634f00db7e77bcb28a8e16311a57add53d7ae214baeb0cc8f2f179edeea3c",
+    "output": "ios/Troop53Guide/Resources/Illustrations/fire/lays.pdf",
+    "outputSha256": "11b8d23348b12a2e57a3193573471af60682ef37aab4f1b8c0514469e2d58e8f"
+  },
+  {
+    "source": "art/svg/firstaid/cpr.svg",
+    "sha256": "62e8587d576932e249ab7ea9adab9843a74fd24eda1e8621501250c8e39e7417",
+    "output": "ios/Troop53Guide/Resources/Illustrations/firstaid/cpr.pdf",
+    "outputSha256": "9747f90168f051d33b3f578238b70fd7a16efb82ab5759987fe1c21e4b386acd"
+  },
+  {
+    "source": "art/svg/firstaid/recovery.svg",
+    "sha256": "0d04c5368fc9939e12bb77da30a19410bda1bfc90590e5ee8ea88261b8e84cad",
+    "output": "ios/Troop53Guide/Resources/Illustrations/firstaid/recovery.pdf",
+    "outputSha256": "11ee2ba59d73a77be896843eaf53834d7ca44672cf5148be64b23e36d538d8cb"
+  },
+  {
+    "source": "art/svg/firstaid/sling.svg",
+    "sha256": "c49ecd7c10c550ec9645cacfc0eccc82ab4a532dee8bbb6c0a9a8251fdf847a6",
+    "output": "ios/Troop53Guide/Resources/Illustrations/firstaid/sling.pdf",
+    "outputSha256": "e2a3d5c773bb5c36761641729c0035283b45df1584a9c49770d595487de87fab"
+  },
+  {
+    "source": "art/svg/firstaid/splint.svg",
+    "sha256": "99895eb815274a1604e4ee7a3ef1e7254c1ad8114e803cecf82c92ed4ebacea7",
+    "output": "ios/Troop53Guide/Resources/Illustrations/firstaid/splint.pdf",
+    "outputSha256": "6f445eca0f38be688b49f60dba1586128994afa3460750ac7792c24329bc151b"
+  },
+  {
+    "source": "art/svg/firstaid/tick.svg",
+    "sha256": "e293329d3f719d8f8693c3b43ff41d767335fa6b09cc634f7d048d9512e4b623",
+    "output": "ios/Troop53Guide/Resources/Illustrations/firstaid/tick.pdf",
+    "outputSha256": "d4a9647ffb3e380ea65b3f586a33bf9449bb7311ee896556577ad0770fc95f7f"
+  },
+  {
+    "source": "art/svg/flag/fold-1.svg",
+    "sha256": "023cd19419b7d4d9ee428b7e7dbe8217e6ea08693091f4b01adbf326b705ca74",
+    "output": "ios/Troop53Guide/Resources/Illustrations/flag/fold-1.pdf",
+    "outputSha256": "cffc3ecd92b3cb98c84bb9bdfa658a3b1d135152f70168dbbbffa9c436c38b0b"
+  },
+  {
+    "source": "art/svg/flag/fold-2.svg",
+    "sha256": "571e8f0e27e9a93264f433aa3607daf71c53e77d88ca92aa752de2f62c0b894f",
+    "output": "ios/Troop53Guide/Resources/Illustrations/flag/fold-2.pdf",
+    "outputSha256": "78807c17954614fe2aaac3b547c7204b37d1f7806547e60e18b92627a33e9a0b"
+  },
+  {
+    "source": "art/svg/flag/fold-3.svg",
+    "sha256": "cdfa24139226e01ae67cc87542c744d35ff34dddd7d1c740508b506baae45e68",
+    "output": "ios/Troop53Guide/Resources/Illustrations/flag/fold-3.pdf",
+    "outputSha256": "6f4792aa34b761bbbd179ee0643f156b82b8b3bcd30921b1fc1afb98af218fcb"
+  },
+  {
+    "source": "art/svg/flag/fold-4.svg",
+    "sha256": "13b8fac04dfa3d1da5e9c5badcc147e64cd7dc6dc251aff91a26bf8da3bc0481",
+    "output": "ios/Troop53Guide/Resources/Illustrations/flag/fold-4.pdf",
+    "outputSha256": "e2c5bc78d5403f1791fdc81ca77bccf420c043a4b8741bd9e4d8c4a9d89c20af"
+  },
+  {
+    "source": "art/svg/flag/fold-5.svg",
+    "sha256": "ab55f83d6985d0a6a9f5b1ad11aa21929b0c92d8faf42238453de93a82c74227",
+    "output": "ios/Troop53Guide/Resources/Illustrations/flag/fold-5.pdf",
+    "outputSha256": "b349169988ba5ddc10d3da8ca868940851a58e900afd102e1e5a6b81fe3148c6"
+  },
+  {
+    "source": "art/svg/headers/basics.svg",
+    "sha256": "4537f78885e963ecfe2d6cb7daa50d87d466012148d2d22933f1d398dbcf0206",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/basics.pdf",
+    "outputSha256": "d451dbc9055d4f6e9be58f3373c27fb4422e7f8b09d931c3557602eb465cbcb6"
+  },
+  {
+    "source": "art/svg/headers/camping.svg",
+    "sha256": "59badbebebee23d39d35d8c757cd5559f22fb9b315ae4ae88882474a6242ea9c",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/camping.pdf",
+    "outputSha256": "9da967645f8b6c0f8d0ba78b8a67a6d33aa68888494354fe5c71088d00ec5711"
+  },
+  {
+    "source": "art/svg/headers/cooking.svg",
+    "sha256": "44bc0643445e9360be047c74cc5493f89b43fd1dce15a833da92ff8b57278f47",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/cooking.pdf",
+    "outputSha256": "89235ed86315165e2f2df0468b2a21f7e7442a8e5912207f44da735dfe2ea358"
+  },
+  {
+    "source": "art/svg/headers/fire.svg",
+    "sha256": "f020478c70beea82a2298206eb50abfba6a83c1daf6182bc8af9d82532ea78ba",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/fire.pdf",
+    "outputSha256": "8ee7379c28b9f29f6519edfe40f47d77dccb5ddf8b8972bfab9e6dca96863fbe"
+  },
+  {
+    "source": "art/svg/headers/firstaid.svg",
+    "sha256": "23c762d14c518f59ed95fb8bc3e850e2386ed99a9ebd9def026bd04c0711805e",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/firstaid.pdf",
+    "outputSha256": "839db4b27ba4062cd342c96ce3a26a678507c70113d694a3775d0647b8aec7bd"
+  },
+  {
+    "source": "art/svg/headers/flag.svg",
+    "sha256": "77eff61acb52403d3a523c16be6a89444df899253d189fbedba4f57fd6c4963e",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/flag.pdf",
+    "outputSha256": "55b28c25b24d851a899cb93d5393f3fa3d6789ff531a50826631634e9ea52205"
+  },
+  {
+    "source": "art/svg/headers/hiking.svg",
+    "sha256": "6e9fb470c3f7c9bc33191faedeac2dbebbb7e7842b24adb223b27e390726a140",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/hiking.pdf",
+    "outputSha256": "79d8a57c1ab5e9d1e843016df6e6cb69cd77e8e95fe476f27641c2299eff8b26"
+  },
+  {
+    "source": "art/svg/headers/knots.svg",
+    "sha256": "efea9e13aeb19a6dce10a023f109cd8254e9277dfcb3fa2a384c556563f71257",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/knots.pdf",
+    "outputSha256": "cb93637ccedf26c7ffd29f97d9a40a6501680d48e4146b142a054eabb53d3ec7"
+  },
+  {
+    "source": "art/svg/headers/lnt.svg",
+    "sha256": "d40e934e6a0588887321d1a7a35f70faf4ac81c0ea22df7570a92783e4a0e083",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/lnt.pdf",
+    "outputSha256": "bab05f0277f35c2ff9edbdd27b884aae440ecca484b0b397ae7260db3c390080"
+  },
+  {
+    "source": "art/svg/headers/nature.svg",
+    "sha256": "dff14174e457e82e2d8c22863b7b59ba0c25a41f262933689156fc0af80e39a4",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/nature.pdf",
+    "outputSha256": "338a4f78110be46a2484a27b586514c16c3331e72e56daefc3ddf03fe7fa0f83"
+  },
+  {
+    "source": "art/svg/headers/navigation.svg",
+    "sha256": "474d8620a7f804a736413bafc10ddf4dfc965fd5d746ab20c9f3190924d5fd65",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/navigation.pdf",
+    "outputSha256": "3039501639df81f7ac8f90f8689542597c4461a71aa00d3ad8b3378e75e14efb"
+  },
+  {
+    "source": "art/svg/headers/prepared.svg",
+    "sha256": "2485f3edaa5c36020256d49bd65a562741446150d29441944e713eb4a4339729",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/prepared.pdf",
+    "outputSha256": "7001aedf80f1f595e813fb2d5786f8143b98afb7fcf77b4f5375e00410703519"
+  },
+  {
+    "source": "art/svg/headers/survival.svg",
+    "sha256": "6bdd890d04e0a8de6ab97fa52fa465c06c418143ba9cce7b3cc5205d74d39391",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/survival.pdf",
+    "outputSha256": "e3908c52bdf69376cf7ae1cda8a5c301b35b7cfad09b44bcf70c3ac22f50a684"
+  },
+  {
+    "source": "art/svg/headers/tools.svg",
+    "sha256": "71ac8f5e2e6b3feee240178c340b4c25e80450a2e52e44609ae2c9ecc2c4c399",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/tools.pdf",
+    "outputSha256": "b7b09401ce774ecf9b519e6428c3d8f8c13f37a894a8468df18da242040872b0"
+  },
+  {
+    "source": "art/svg/headers/water.svg",
+    "sha256": "c6b2c078f394e2b299d3ee01f13567d5b4fe843d4c5fc1de4e4edf086c135621",
+    "output": "ios/Troop53Guide/Resources/Illustrations/headers/water.pdf",
+    "outputSha256": "c00005e4d9303be506e131fa4436095ac383759675101eeb5030f82f534e6a9b"
+  },
+  {
+    "source": "art/svg/knots/bowline-1.svg",
+    "sha256": "289c339a18d5feb37afa5e64f04c466047bb444c84474cd7e03d500c3ba5a0c2",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/bowline-1.pdf",
+    "outputSha256": "feab9091eeca415fdc46bdc6bb32e3cad08c5a5a5c153770b39703a07cfdcce9"
+  },
+  {
+    "source": "art/svg/knots/bowline-2.svg",
+    "sha256": "85ea3518e37ac58fdd1bda7a79e80539bc66ee74a6a3e09e438aeadc25751fdd",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/bowline-2.pdf",
+    "outputSha256": "7c642e420639b69515cb9cc2e27378f83afa01aee45cf571a3b579db0551bb63"
+  },
+  {
+    "source": "art/svg/knots/bowline-3.svg",
+    "sha256": "e82f5d7434246bc153164b6996751ed944a36c4fdc235b39104338a49db5b228",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/bowline-3.pdf",
+    "outputSha256": "7ec1c944edf528e7f80d3ef2e86a51b3f35dd2ab10e210ecd6c76c6fb4ede3a7"
+  },
+  {
+    "source": "art/svg/knots/bowline-4.svg",
+    "sha256": "f6e0b33392929c7e57b81728f9e6ad510405f28094bb790804ff728e23b848cc",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/bowline-4.pdf",
+    "outputSha256": "7c68a51f7d6bc831c66fb7a14970ab7778419c8d090e6a5658dc53b45e1ad0c7"
+  },
+  {
+    "source": "art/svg/knots/bowline-5.svg",
+    "sha256": "269ad43ff837d1d4d02d3226679f55987b1952a058802a0030e7e8ff7bba4e62",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/bowline-5.pdf",
+    "outputSha256": "9132df9009082362de29fa5876eec7b85e6fef990fef801b4d8d78069ce95f4a"
+  },
+  {
+    "source": "art/svg/knots/clove-hitch-1.svg",
+    "sha256": "5f612488a440809644b1cff39cc5cee8faa08252863d691f49e41aa3bba12953",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/clove-hitch-1.pdf",
+    "outputSha256": "336bb019ecfdf11f62ba4e72691b2d3cbe299029d939cc30143e4db95484c7dc"
+  },
+  {
+    "source": "art/svg/knots/clove-hitch-2.svg",
+    "sha256": "30dd822e0cc0a828d4725aa8b340c86315b3545d5f17b32289e9110a5372a6ac",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/clove-hitch-2.pdf",
+    "outputSha256": "ed7e14548caec1bd4e919b87517d6c02a7dfdf7045b3567163bc2651b0f6cfc5"
+  },
+  {
+    "source": "art/svg/knots/clove-hitch-3.svg",
+    "sha256": "9a9f412379fae54ecef05c6fa9c8075c52de4666f37cd419c6e2de88df94f6f8",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/clove-hitch-3.pdf",
+    "outputSha256": "fed6f8bdc4a1b80bb4dbf87812736750c03314c6558a9697e50f12e06196d08d"
+  },
+  {
+    "source": "art/svg/knots/clove-hitch-4.svg",
+    "sha256": "6b7213732cc2f48ff3adcaf695fbaaaccc41e7b2473f53fa30d8b4104c9493dd",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/clove-hitch-4.pdf",
+    "outputSha256": "645bba1d17704f61ff71b6068e8af1695bf72a8042bc0bd5be24e1d0003f87ed"
+  },
+  {
+    "source": "art/svg/knots/diagonal-lashing-1.svg",
+    "sha256": "15a08f1bd31bdbdcfd98500b927ca43dac339d9e6f25a1b0ded124069410a0b4",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/diagonal-lashing-1.pdf",
+    "outputSha256": "0d7754c7ed4e9ce77388f80cee16e434f922cf448f4a20935f26846a44c3cb0e"
+  },
+  {
+    "source": "art/svg/knots/diagonal-lashing-2.svg",
+    "sha256": "708085b4bbf0c17b22cffd6e4a3e9d49ee958b6714d8c2b1159a4450e1dc7af6",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/diagonal-lashing-2.pdf",
+    "outputSha256": "0076934702243b77ce1cdaffa34cbaf7e99be5748b5e368f7488f1019e256a9e"
+  },
+  {
+    "source": "art/svg/knots/diagonal-lashing-3.svg",
+    "sha256": "95e4945a0f9231dd7a907e2acf107760c8edd5dc6ddefdc3c209f4fdad46f4be",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/diagonal-lashing-3.pdf",
+    "outputSha256": "3b92107be073f76054364f01bdab1535953ee5893ba0b17b5a6333b4ef7ad69e"
+  },
+  {
+    "source": "art/svg/knots/diagonal-lashing-4.svg",
+    "sha256": "399250c622d254b2c2cc92b5d4ba8e8b8c0174534293a29069a62aab16dbef17",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/diagonal-lashing-4.pdf",
+    "outputSha256": "2b800933e47dab5e43c0b10210337709bd2fba43a652539560d80534de809d9d"
+  },
+  {
+    "source": "art/svg/knots/diagonal-lashing-5.svg",
+    "sha256": "9b78bea0c00532782cac3b13dcb7881eeff8c545a3ec8b53a401460fa497e5e8",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/diagonal-lashing-5.pdf",
+    "outputSha256": "2fafad91be4b6df505bbbbd2b00894aa6672a5f68ecaed00ff849e24aed388aa"
+  },
+  {
+    "source": "art/svg/knots/figure-eight-1.svg",
+    "sha256": "80fce7597aaaf8cf90b365d1226bc248989c68fbb44534037dca1f987dd41e7b",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/figure-eight-1.pdf",
+    "outputSha256": "813bc53c1471aa0d86d77b0d9c161cb60e1cc3b75384a988f37a5b7e0fa67b5d"
+  },
+  {
+    "source": "art/svg/knots/figure-eight-2.svg",
+    "sha256": "72898b3c1bad20d16230c096a4f0f2d5e28866a6b91c2c6b9d8aa022010d0ddf",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/figure-eight-2.pdf",
+    "outputSha256": "9134feb543a0da6fdc5b5819ae83a8069fabc3d76dfae2811b067f9f92584e31"
+  },
+  {
+    "source": "art/svg/knots/figure-eight-3.svg",
+    "sha256": "ed99d79906283a38ccefc51f1287086777bfb66f8078f3f563cef7d27542e167",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/figure-eight-3.pdf",
+    "outputSha256": "944f82ebed7a5206683926fe83c73b678243c627ca97ea653a44abd7bbd798d1"
+  },
+  {
+    "source": "art/svg/knots/figure-eight-4.svg",
+    "sha256": "7b3a7de866a4487bebdc640fec35e18aa87732944026285725dbc2b677da7238",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/figure-eight-4.pdf",
+    "outputSha256": "db5bfde5cb78a337092ac094e0391ac3d08f84d9a0ea37d7161f9c6621e18b8a"
+  },
+  {
+    "source": "art/svg/knots/rope-care-1.svg",
+    "sha256": "5b3990c6fade943b489b851bf19796c644dabf5b336f10746047dcdcc5e1c11b",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/rope-care-1.pdf",
+    "outputSha256": "7b1ab381104fd12063532fea7c1cd777d6d064cd02871eff40053bdfe8a0ce05"
+  },
+  {
+    "source": "art/svg/knots/rope-care-2.svg",
+    "sha256": "0781f066387415a27fe737a3373c3d0becea5d3c5cf1015cdf050f8e117bd4d0",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/rope-care-2.pdf",
+    "outputSha256": "34f577c5a90b95b8dd19f230f658392c9cd84386444af4e18edcce057ed8d9f5"
+  },
+  {
+    "source": "art/svg/knots/rope-care-3.svg",
+    "sha256": "b68894c88bad7a87f1bd60b5610471813f2c91f4b30e4b612f23082c3d62ef17",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/rope-care-3.pdf",
+    "outputSha256": "caf050b4f6a7c2d102023fb4f159d544bd12ae72b579e2d1ea47fd63f7ef493e"
+  },
+  {
+    "source": "art/svg/knots/rope-care-4.svg",
+    "sha256": "0f593988ef03492e5e4eb4570ffd5a1294d349e4bd84e96e4bc1bdf5a9aadc95",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/rope-care-4.pdf",
+    "outputSha256": "0871336d17bccf2391f00f53ef081c1738caf5a509fc42802db6e42fad36495b"
+  },
+  {
+    "source": "art/svg/knots/shear-lashing-1.svg",
+    "sha256": "924a93e7c50b2d77f364fbc0f9a1f0be3cc3421db682356e8cc0ff268de99f7a",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/shear-lashing-1.pdf",
+    "outputSha256": "795cb11b98e31e81151cdc1d79cb1a4d5bdc3aa820ea6e04c520c93296c95477"
+  },
+  {
+    "source": "art/svg/knots/shear-lashing-2.svg",
+    "sha256": "7e699626e80274a27e253d882cd5fd23495b4727046130fc29a86bc196aa115f",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/shear-lashing-2.pdf",
+    "outputSha256": "f56ef1b134133070ddaace6dc132cdb680a1d21fcc6666a66766bc994f21c914"
+  },
+  {
+    "source": "art/svg/knots/shear-lashing-3.svg",
+    "sha256": "ce8c4afa638ff131854b31917fbaebb407e35e3a4972ee8ad55512b5d8230dd6",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/shear-lashing-3.pdf",
+    "outputSha256": "b6878f7fd6e8c9393e74935b69c319a11c85013688c49c5ee46952d7ee97a3dc"
+  },
+  {
+    "source": "art/svg/knots/shear-lashing-4.svg",
+    "sha256": "eb59a1bf3154d4f352fdaedb4909c2b6d1448c9e94a48629b98841de0659241f",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/shear-lashing-4.pdf",
+    "outputSha256": "b6807ebc000544193a94f03d3dada58f6fbb9d7f2ced54ed3d3a03048d9de982"
+  },
+  {
+    "source": "art/svg/knots/shear-lashing-5.svg",
+    "sha256": "b16cf7ba52e02f0727f7ce36085487f1fa320357be96f0ade1fe0105f00ca1d3",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/shear-lashing-5.pdf",
+    "outputSha256": "284b2865ac3825d2561924278fc7c913ce8abef3145405cb003dd5dee7f68b4e"
+  },
+  {
+    "source": "art/svg/knots/sheet-bend-1.svg",
+    "sha256": "12c0147b0afe1d7228e36496022ea8c3089dfcf0541f1773fdc819c4e0e71504",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/sheet-bend-1.pdf",
+    "outputSha256": "2a780803f939cf43e2c1f64928726e26ff07e101b807d228ba6386010ea572f2"
+  },
+  {
+    "source": "art/svg/knots/sheet-bend-2.svg",
+    "sha256": "d1492dda89d9e14a1b8ba6c8252fb699ad61ae0cd7459448f9eaf86dcd29d93a",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/sheet-bend-2.pdf",
+    "outputSha256": "6d130b68b42d2b63825af2640a6af0bebcc10d77fb2a7e647c93b8c35d819392"
+  },
+  {
+    "source": "art/svg/knots/sheet-bend-3.svg",
+    "sha256": "d129f61604a5b900997f764414f75e61eb64a8745139adc16818db62091f01fa",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/sheet-bend-3.pdf",
+    "outputSha256": "0787b3979eab98ca5a0571a578ceae3c54e3bbdc64f76133151d915107d5ed0a"
+  },
+  {
+    "source": "art/svg/knots/sheet-bend-4.svg",
+    "sha256": "65072fc5c0b598a14be49af434f3e8502cb56c26d30b7b5e7dd924f4df85a186",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/sheet-bend-4.pdf",
+    "outputSha256": "cfe275bae539e1d2823ac99d7025c0d33eb8ff0e79ceb35bd21180374fdc7aba"
+  },
+  {
+    "source": "art/svg/knots/sheet-bend-5.svg",
+    "sha256": "7a7cf9820d701cdfd5a7e48a9ce6f721f6d499fef3c001ba6ba63ce63c285076",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/sheet-bend-5.pdf",
+    "outputSha256": "1935469825988e49db80c4f41f08b43cd46ed13f766e7998cf0ce59246e01440"
+  },
+  {
+    "source": "art/svg/knots/square-knot-1.svg",
+    "sha256": "58aa1874dfd40dfd0df855f991cce5268eeca2689b72e739e0cdf708bb9e1f2a",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/square-knot-1.pdf",
+    "outputSha256": "0280ded2a915a47a32147afb1dc9b57c38819ef07e6707cd2ee69b818478649c"
+  },
+  {
+    "source": "art/svg/knots/square-knot-2.svg",
+    "sha256": "2a4ca18406963b7868d828408a680694a2bf6bbd06b275a2070bf57c704398e6",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/square-knot-2.pdf",
+    "outputSha256": "b5c2ac6ddeb1f5d77b1fda8d9ea5b9322bb7252996097d477900ac3fc1232ff7"
+  },
+  {
+    "source": "art/svg/knots/square-knot-3.svg",
+    "sha256": "ab2b9f32ddd8561ae6b3c1828205c9431c41ec066f7eaf159e2738c3fbf5e18d",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/square-knot-3.pdf",
+    "outputSha256": "9715efd6eb8b63d7961627375b8ec20f19b5ed124256c9b65358197104c5f859"
+  },
+  {
+    "source": "art/svg/knots/square-knot-4.svg",
+    "sha256": "454983da9f6641c236aaac1fafb19920488de748ed3ec07583de90d32d9f2385",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/square-knot-4.pdf",
+    "outputSha256": "d3851708ace8d3b798ff7b658b84a0402c2333e271c98bf4b6db0a23d2ae7e1b"
+  },
+  {
+    "source": "art/svg/knots/square-lashing-1.svg",
+    "sha256": "e91f4d09f235489c8e041c68a36b42b33ef2bfff31e55a72d29813f9ab15760c",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/square-lashing-1.pdf",
+    "outputSha256": "68f98eb41707a1909d39722c8009cf86ea0ba84caf72c120ac9df498c3dec973"
+  },
+  {
+    "source": "art/svg/knots/square-lashing-2.svg",
+    "sha256": "1d7477f6e9cbe6f134686703aab1c4b89e0b34c33d3f45fdce8d606718fc4f9b",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/square-lashing-2.pdf",
+    "outputSha256": "ab2b30dfb660387c5009187b3b7a5b4352eea682f270a9b5a1cb8db2d68fdcad"
+  },
+  {
+    "source": "art/svg/knots/square-lashing-3.svg",
+    "sha256": "db706c2b3f19b83b5ab08673fd68750bd4bb5930bed9b78ce971b110c19409d3",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/square-lashing-3.pdf",
+    "outputSha256": "e9c7ec2484d4c07df1b44fe0fa41618bed86a120dbc2d1fbfc8a888931eed42e"
+  },
+  {
+    "source": "art/svg/knots/square-lashing-4.svg",
+    "sha256": "1881633842b6b6ed63ee9a4edffb269e50c6a00a1a87073ff07af649d159c2f5",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/square-lashing-4.pdf",
+    "outputSha256": "44d830f6bb6d70228f7771d8e728554a57a34fdde9b1b179d0e059a104b78321"
+  },
+  {
+    "source": "art/svg/knots/taut-line-1.svg",
+    "sha256": "3fec752373fa1845aae3013487d6fc5301d16ebe20032321786cbbd8ea9fba98",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/taut-line-1.pdf",
+    "outputSha256": "403fb9b30aa0c8045aae6c48a30f4eaf28d98e5deb1fc62ef75222ff077e78f5"
+  },
+  {
+    "source": "art/svg/knots/taut-line-2.svg",
+    "sha256": "07714bd294404de7e6cdea89ab52bb042a6df93a33b41f9ef1b8a87c000dce2f",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/taut-line-2.pdf",
+    "outputSha256": "7cfbe54e1339ba21a7877f924987e0b755375f9330f1d33674dca92f050366fb"
+  },
+  {
+    "source": "art/svg/knots/taut-line-3.svg",
+    "sha256": "25355e17447d0576a70267a96aa7b759b72f628b303318ce944284ad641ee479",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/taut-line-3.pdf",
+    "outputSha256": "52a076a0bc5f8e5ae7f6e03bae6e3b80c2f2cfababcf8176eea3c3e841699882"
+  },
+  {
+    "source": "art/svg/knots/taut-line-4.svg",
+    "sha256": "b14a480f5300bb2afe1cdaeeb96fab8722f02920626629365b66ecd05df05ce9",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/taut-line-4.pdf",
+    "outputSha256": "db0603074d70888992b2625f0c91bb38876df6be1dadf2cc219512a99d65a913"
+  },
+  {
+    "source": "art/svg/knots/timber-hitch-1.svg",
+    "sha256": "2435112f232b7841af7c504dc8f301672b34a5af5fdd9ba63212fc4e5437c7d8",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/timber-hitch-1.pdf",
+    "outputSha256": "c681dd1585330d22925339343127683d842c2f6f6a2303f38939663fa607e20b"
+  },
+  {
+    "source": "art/svg/knots/timber-hitch-2.svg",
+    "sha256": "a8e5b92599588ec762259b0366fe03c845dfcd88038c01549fe3527d4741e829",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/timber-hitch-2.pdf",
+    "outputSha256": "10eb2cd80011ddc75ebc26a121adefcf1b26d79b6f8c6b2c4bff3890831ee353"
+  },
+  {
+    "source": "art/svg/knots/timber-hitch-3.svg",
+    "sha256": "e90e156aa375b1c6f208384e2b3047d2875f0c74bc1fd646ff998880ce6d8824",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/timber-hitch-3.pdf",
+    "outputSha256": "61804d940712d8373a6ac00ac6c8f56ce2c36b2e59d219692024476fc6221c53"
+  },
+  {
+    "source": "art/svg/knots/timber-hitch-4.svg",
+    "sha256": "58815d3de87890ea00d3fbbb84f183d2256bf24717b8fd58f84d8816a843dc74",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/timber-hitch-4.pdf",
+    "outputSha256": "75f27d7fbe5085527f7955c11b639141a108d80f6dcd4bc962ca77839fc564aa"
+  },
+  {
+    "source": "art/svg/knots/two-half-hitches-1.svg",
+    "sha256": "fb970520d46b9dd7ea5f1ef6f53671e9028da769aa27b854a6a43782cb4ce5b0",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/two-half-hitches-1.pdf",
+    "outputSha256": "c3ef839116712b2c27082ece7a93d9b433fd3f463b4235952b709db381503f6a"
+  },
+  {
+    "source": "art/svg/knots/two-half-hitches-2.svg",
+    "sha256": "7ce6bb7e6d4af0e93aa0df3376edbbdf6d77439e8cc59e98f70e6b8b3ad10cf1",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/two-half-hitches-2.pdf",
+    "outputSha256": "98cc98193a8af84f4365ec1c328d789ce78c0cdb9f5960ca399ca3d87f5db8b7"
+  },
+  {
+    "source": "art/svg/knots/two-half-hitches-3.svg",
+    "sha256": "8ae488f9f1a9c60b4fe91966cddec2b482fa0c3191f6d9eb35553b96fc031ef4",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/two-half-hitches-3.pdf",
+    "outputSha256": "c57a797bb53e2b5c0b83e36890b9da2cf35682443e51ade282bfeab325c2a0c9"
+  },
+  {
+    "source": "art/svg/knots/two-half-hitches-4.svg",
+    "sha256": "4837f2699c29cc83184b88f8b0f4b8023ba726cfd8f746cebdd89390bd2c8ceb",
+    "output": "ios/Troop53Guide/Resources/Illustrations/knots/two-half-hitches-4.pdf",
+    "outputSha256": "93f368f8973b3d1da3e25f38cf510d53ac605586b8322cc6219a6daee8098911"
+  },
+  {
+    "source": "art/svg/nature/poison-plants.svg",
+    "sha256": "4a1e947c1b581ca8cbe7161148bdd3ebcf87249bacb8ee397854ddd3d1c0445b",
+    "output": "ios/Troop53Guide/Resources/Illustrations/nature/poison-plants.pdf",
+    "outputSha256": "cc71e77ea8171115726d003ee222716c8b4eb6b4254c414d8ab63925a63b9e9e"
+  },
+  {
+    "source": "art/svg/navigation/compass.svg",
+    "sha256": "0661db1b4427d8a78e43d1eb08e04965cc08108337ebcb5ae497874b5b72f63e",
+    "output": "ios/Troop53Guide/Resources/Illustrations/navigation/compass.pdf",
+    "outputSha256": "4263c51a25cc9b8d5af3cd144387e033d12f19b758a3452732a798a5f68b93eb"
+  },
+  {
+    "source": "art/svg/navigation/contours.svg",
+    "sha256": "f38a2d7722eb9a657131f3ad2d0d710d19ffd0aa1f4f03fa0a5b512a23836c18",
+    "output": "ios/Troop53Guide/Resources/Illustrations/navigation/contours.pdf",
+    "outputSha256": "b874419e98ee998d63423181c051bb4ba8899285db0013a8dd212730ecd120e5"
+  },
+  {
+    "source": "art/svg/navigation/polaris.svg",
+    "sha256": "d88396698815dacfd2bbb596bba3284ce5c22a4a55605c3a9825fd9c58628e34",
+    "output": "ios/Troop53Guide/Resources/Illustrations/navigation/polaris.pdf",
+    "outputSha256": "366e7d747a6ba119c7c16fb4638152427909abe9819076feb30e2c1ed24b3ebb"
+  },
+  {
+    "source": "art/svg/navigation/red-in-shed.svg",
+    "sha256": "a5c70d8716c7488078c185594f66b2f7bdfe5798572cf7a9be4249c0351d6c8c",
+    "output": "ios/Troop53Guide/Resources/Illustrations/navigation/red-in-shed.pdf",
+    "outputSha256": "c9958d359508c1a3157aa6cdcc0a73367aa3d1fc0caa9ad0ebc72e782f94580c"
+  },
+  {
+    "source": "art/svg/navigation/shadow-stick.svg",
+    "sha256": "f9aaa8f535fbaafe72a71c35c1bd45b44af600d680054700e3ce17cfd518446b",
+    "output": "ios/Troop53Guide/Resources/Illustrations/navigation/shadow-stick.pdf",
+    "outputSha256": "7673e31455967217f7d98fd3aabefa55ae1c977808a6f695434191f71852b37e"
+  },
+  {
+    "source": "art/svg/survival/debris-hut.svg",
+    "sha256": "5ecc6451431312c00ea48afab0e813c0c937b4485cebb88b6714e7cb4c48a06e",
+    "output": "ios/Troop53Guide/Resources/Illustrations/survival/debris-hut.pdf",
+    "outputSha256": "d3f3d79bfbfc72e0c8542803e7bd8d0fd5b90647a5cd67f35dddb626ff0a27a4"
+  },
+  {
+    "source": "art/svg/survival/signals.svg",
+    "sha256": "668aedb407afb91897552f3dd5295f0cef5fdec8f7498a81f1164d7478dad183",
+    "output": "ios/Troop53Guide/Resources/Illustrations/survival/signals.pdf",
+    "outputSha256": "cbf2edcd1bcd18912c1b828c7ae5727be3eb240abb93b03728e0abc35802c541"
+  },
+  {
+    "source": "art/svg/water/rescue.svg",
+    "sha256": "551d4f4cd8929d3a4a600643d59b877a642e5c675966c34f00a4d8ab22c7304e",
+    "output": "ios/Troop53Guide/Resources/Illustrations/water/rescue.pdf",
+    "outputSha256": "b3c85118557b000e81fb962c3f8edddf867980b066e2a49bb9ad4d5161c6e933"
+  },
+  {
+    "source": "app/src/main/assets/img/camping/campsite-comparison.webp",
+    "sha256": "199408b753d0bc24f3bdb4d5d1ddb1afe49d385ba469ad26d1d7c505ae53a1f7",
+    "output": "ios/Troop53Guide/Resources/Illustrations/camping/campsite-comparison.jpg",
+    "outputSha256": "ea122f5b22c28f7fb6a239757dd0233d5c53abd37a579f08f5ee2721350f35c6"
+  },
+  {
+    "source": "app/src/main/assets/img/camping/tent-rainfly.webp",
+    "sha256": "6ea9b3351bd7e9e6bd1e30593973c36683cdc21817b00e62be0499e83dddd750",
+    "output": "ios/Troop53Guide/Resources/Illustrations/camping/tent-rainfly.jpg",
+    "outputSha256": "6983870f6788474091cb03d20be9bbd206f9316bc0a7b2cb8fd7fe26c2064640"
+  }
+]
