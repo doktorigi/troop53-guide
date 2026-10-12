@@ -16,3 +16,9 @@ art/preview/
 .env
 .env.*
 !.env.example
+ios/DerivedData/
+ios/TestResults/
+**/xcuserdata/
+*.xcuserstate
+*.xcresult/
+*.ipa
