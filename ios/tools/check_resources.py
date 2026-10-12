@@ -1,6 +1,6 @@
 """Standard-library parity check: canonical Android content + authored SVG -> iOS bundle."""
 from pathlib import Path
-import hashlib, json, re
+import hashlib, json, plistlib, struct
 ROOT=Path(__file__).resolve().parents[2]
 def sha(path):
     data=path.read_bytes()
@@ -26,4 +26,11 @@ for file in sorted((ROOT/'app/src/main/assets/guide').glob('*.txt')):
 assert len(sections)==15 and len(sections)==len(set(sections))
 assert len(articles)==len(set(articles))
 for section in sections: assert (folder/'headers'/f'{section}.pdf').is_file(), section
+icon=ROOT/'ios/Troop53Guide/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png'
+png=icon.read_bytes()
+assert png[:8]==b'\x89PNG\r\n\x1a\n' and struct.unpack('>II',png[16:24])==(1024,1024)
+assert png[25]==2, 'App icon must be RGB without alpha'
+privacy=plistlib.loads((ROOT/'ios/Troop53Guide/PrivacyInfo.xcprivacy').read_bytes())
+assert privacy['NSPrivacyTracking'] is False
+assert privacy['NSPrivacyAccessedAPITypes'][0]['NSPrivacyAccessedAPITypeReasons']==['CA92.1']
 print(f'Parity passed: {len(sections)} shared sections, {len(articles)} articles, {images} image blocks, {len(manifest)} exported illustrations.')

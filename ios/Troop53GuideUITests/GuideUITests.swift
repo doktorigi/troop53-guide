@@ -32,9 +32,12 @@ final class GuideUITests: XCTestCase {
         app.buttons["practice-next"].tap()
         XCTAssertEqual(app.staticTexts["practice-step"].label, "Step 2 of 5")
         capture("03-knot-practice")
-        let image = app.buttons["image-knots/bowline-2.xml"]
+        let image = app.buttons["practice-image-knots/bowline-2.xml"]
         XCTAssertTrue(image.waitForExistence(timeout: 5)); image.tap()
         XCTAssertTrue(app.buttons["close-illustration"].waitForExistence(timeout: 5))
+        let viewer = app.images["zoomable-illustration"]
+        XCTAssertTrue(viewer.waitForExistence(timeout: 5))
+        viewer.pinch(withScale: 2, velocity: 1)
         app.buttons["Zoom in"].tap(); app.buttons["Reset"].tap()
         capture("04-vector-viewer")
         app.buttons["close-illustration"].tap()
@@ -77,5 +80,23 @@ final class GuideUITests: XCTestCase {
         capture("09-bitmap-viewer")
         app.buttons["close-illustration"].tap()
         XCTAssertTrue(app.buttons["save-article"].exists)
+    }
+
+    func testRotationKeepsGuideAndIllustrationUsable() {
+        openArticle("bowline", query: "bowline")
+        app.buttons["knot-practice"].tap()
+        XCTAssertTrue(app.buttons["practice-image-knots/bowline-1.xml"].waitForExistence(timeout: 5))
+        app.buttons["practice-image-knots/bowline-1.xml"].tap()
+        XCTAssertTrue(app.buttons["close-illustration"].waitForExistence(timeout: 5))
+        XCUIDevice.shared.orientation = .landscapeLeft
+        capture("10-landscape-viewer")
+        XCTAssertTrue(app.buttons["Reset"].isHittable)
+        app.buttons["Reset"].tap()
+        app.buttons["close-illustration"].tap()
+        XCTAssertTrue(app.buttons["practice-next"].waitForExistence(timeout: 5))
+        app.buttons["practice-next"].tap()
+        XCTAssertEqual(app.staticTexts["practice-step"].label, "Step 2 of 5")
+        XCUIDevice.shared.orientation = .portrait
+        capture("11-rotated-practice")
     }
 }

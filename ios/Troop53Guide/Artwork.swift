@@ -58,6 +58,7 @@ struct ArtworkSelection: Identifiable {
 struct ArtworkCard: View {
     let path: String
     let caption: String
+    var identifierPrefix = "image"
     @State private var image: UIImage?
     @State private var unavailable = false
     @State private var selected: ArtworkSelection?
@@ -76,7 +77,7 @@ struct ArtworkCard: View {
             }.troopCard()
         }
         .buttonStyle(.plain).accessibilityLabel(caption).accessibilityHint("Opens a full screen illustration with zoom controls")
-        .accessibilityIdentifier("image-\(path)")
+        .accessibilityIdentifier("\(identifierPrefix)-\(path)")
         .task(id: path) {
             image = nil; unavailable = false
             guard let url = ArtworkResources.url(path) else { unavailable = true; return }
@@ -147,7 +148,8 @@ private struct ZoomableDocument: UIViewRepresentable {
         let view = FittedPDFView()
         view.displayMode = .singlePage; view.displayDirection = .vertical; view.displaysPageBreaks = false
         view.backgroundColor = UIColor(TroopTheme.paper); view.autoScales = true
-        view.document = document; view.accessibilityLabel = caption
+        view.document = document; view.isAccessibilityElement = true
+        view.accessibilityLabel = caption; view.accessibilityTraits = .image
         let doubleTap = UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.doubleTap(_:)))
         doubleTap.numberOfTapsRequired = 2; view.addGestureRecognizer(doubleTap)
         return view

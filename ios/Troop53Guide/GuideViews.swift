@@ -212,7 +212,7 @@ struct KnotPracticeView: View {
                 Text("Step \(index + 1) of \(article.practiceDiagrams.count)").font(.headline).accessibilityIdentifier("practice-step")
                 ScrollView {
                     let block = article.practiceDiagrams[index]
-                    ArtworkCard(path: block.imagePath!, caption: block.text).id(index).padding()
+                    ArtworkCard(path: block.imagePath!, caption: block.text, identifierPrefix: "practice-image").id(index).padding()
                 }
                 HStack {
                     Button("Back") { index -= 1 }.disabled(index == 0).frame(maxWidth: .infinity).accessibilityIdentifier("practice-back")

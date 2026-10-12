@@ -49,10 +49,34 @@ jobs:
         run: |
           set -o pipefail
           xcodebuild -project ios/Troop53Guide.xcodeproj -scheme Troop53Guide -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -derivedDataPath ios/DerivedData -resultBundlePath ios/TestResults/Guide.xcresult -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO test | tee ios/simulator-tests.log
+      - name: Run interface tests on iPad
+        run: |
+          set -o pipefail
+          IPAD_ID=$(python3 - <<'PY'
+          import json
+          data = json.load(open('/tmp/troop53-simulators.json'))
+          devices = [d for runtime, entries in data['devices'].items() if 'iOS-18-5' in runtime for d in entries if 'iPad' in d['name']]
+          devices.sort(key=lambda d: d['name'])
+          assert devices, 'Missing iPad simulator'
+          print(devices[0]['udid'])
+          PY
+          )
+          xcrun simctl shutdown "$SIMULATOR_ID"
+          xcrun simctl boot "$IPAD_ID" || true
+          xcrun simctl bootstatus "$IPAD_ID" -b
+          xcodebuild -project ios/Troop53Guide.xcodeproj -scheme Troop53Guide -destination "platform=iOS Simulator,id=$IPAD_ID" -derivedDataPath ios/DerivedData -resultBundlePath ios/TestResults/iPad.xcresult -only-testing:Troop53GuideUITests -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO test | tee ios/ipad-tests.log
       - name: Package simulator app
         run: |
           ditto -c -k --sequesterRsrc --keepParent ios/DerivedData/Build/Products/Debug-iphonesimulator/Troop53Guide.app ios/Troop53Guide-simulator.zip
-          xcrun xcresulttool export attachments --path ios/TestResults/Guide.xcresult --output-path ios/TestResults/Screenshots
+      - name: Export screenshots
+        if: always()
+        run: |
+          for RESULT in ios/TestResults/*.xcresult; do
+            if [ -d "$RESULT" ]; then
+              NAME=$(basename "$RESULT" .xcresult)
+              xcrun xcresulttool export attachments --path "$RESULT" --output-path "ios/TestResults/Screenshots-$NAME"
+            fi
+          done
       - name: Upload simulator app
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
