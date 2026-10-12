@@ -31,7 +31,7 @@ for target in targets:
         for name, path, typ in [
             ('guide','../app/src/main/assets/guide','folder'), ('quiz','../app/src/main/assets/quiz.txt','text'),
             ('Illustrations','Troop53Guide/Resources/Illustrations','folder'),
-            ('Assets','Troop53Guide/Assets.xcassets','folder.assetcatalog'),
+            ('Assets','Troop53Guide/Resources/Assets.xcassets','folder.assetcatalog'),
             ('Privacy','Troop53Guide/PrivacyInfo.xcprivacy','text.xml')]:
             fileid = obj('resource:'+name,'PBXFileReference',lastKnownFileType=typ,path=path,sourceTree='SOURCE_ROOT')
             resource_refs.append(fileid); resource_builds.append(obj('resourcebuild:'+name,'PBXBuildFile',fileRef=fileid))

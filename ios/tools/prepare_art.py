@@ -46,7 +46,10 @@ def svg_pdf(source,destination):
         pdf.drawPath(pen.path,fill=int(fill!='none'),stroke=int(stroke is not None),fillMode=1)
     pdf.showPage(); pdf.save()
 
-def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def sha(path):
+    data=path.read_bytes()
+    if path.suffix=='.svg': data=data.replace(b'\r\n', b'\n')
+    return hashlib.sha256(data).hexdigest()
 
 def main():
     records=[]

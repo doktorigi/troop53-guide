@@ -51,7 +51,7 @@ A1EA68C60AACD82DA961D9B8 = { isa = "PBXBuildFile"; fileRef = A968F55ADC290FD136B
 A2A377140D9C818E0114DB3F = { isa = "PBXBuildFile"; fileRef = A65F9E392504E0D286C1F3A4; };
 A65F9E392504E0D286C1F3A4 = { isa = "PBXFileReference"; lastKnownFileType = "sourcecode.swift"; path = "Troop53GuideApp.swift"; sourceTree = "<group>"; };
 A968F55ADC290FD136B13837 = { isa = "PBXFileReference"; lastKnownFileType = "text"; path = "../app/src/main/assets/quiz.txt"; sourceTree = "SOURCE_ROOT"; };
-B23AD8FD118C26F9FFBAC6AB = { isa = "PBXFileReference"; lastKnownFileType = "folder.assetcatalog"; path = "Troop53Guide/Assets.xcassets"; sourceTree = "SOURCE_ROOT"; };
+B23AD8FD118C26F9FFBAC6AB = { isa = "PBXFileReference"; lastKnownFileType = "folder.assetcatalog"; path = "Troop53Guide/Resources/Assets.xcassets"; sourceTree = "SOURCE_ROOT"; };
 B62201BD0D3B619774FEAB36 = { isa = "PBXFileReference"; lastKnownFileType = "folder"; path = "Troop53Guide/Resources/Illustrations"; sourceTree = "SOURCE_ROOT"; };
 CA15336A841780CB2ED9001F = { isa = "PBXFileReference"; explicitFileType = "wrapper.cfbundle"; includeInIndex = "0"; path = "Troop53GuideUITests.xctest"; sourceTree = "BUILT_PRODUCTS_DIR"; };
 CE429541FEB2A8BF677AAD68 = { isa = "PBXGroup"; children = (6ECA928CDF8BF4CC4E07F156); path = "Troop53GuideTests"; sourceTree = "<group>"; };

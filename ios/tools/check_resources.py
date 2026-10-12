@@ -2,7 +2,10 @@
 from pathlib import Path
 import hashlib, json, re
 ROOT=Path(__file__).resolve().parents[2]
-def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def sha(path):
+    data=path.read_bytes()
+    if path.suffix=='.svg': data=data.replace(b'\r\n', b'\n')
+    return hashlib.sha256(data).hexdigest()
 manifest=json.loads((ROOT/'ios/art-manifest.json').read_text(encoding='utf8'))
 assert len(manifest)==91, 'Expected 89 vector illustrations and two camping scenes'
 for record in manifest:
