@@ -1,8 +1,8 @@
 package com.doktorigi.troop53
 
-enum class Kind { PARA, HEADING, BULLET, STEP, WARN, TIP }
+enum class Kind { PARA, HEADING, BULLET, STEP, WARN, TIP, IMAGE }
 
-data class Block(val kind: Kind, val text: String, val number: Int = 0)
+data class Block(val kind: Kind, val text: String, val number: Int = 0, val imagePath: String? = null)
 
 data class Article(
     val id: String,
@@ -31,6 +31,7 @@ data class Question(val prompt: String, val answer: String, val wrong: List<Stri
  * Guide files are line based:
  *   === id | Title | icon | #RRGGBB | Subtitle   starts a category
  *   # id | Title | Summary                       starts an article
+ *   @ relative/path.webp | Caption               image under assets/img
  *   ## Heading, - bullet, 1. step, ! warning, > tip, anything else is a paragraph.
  */
 object GuideParser {
@@ -74,6 +75,12 @@ object GuideParser {
                 line.startsWith("- ") -> blocks += Block(Kind.BULLET, line.drop(2))
                 line.startsWith("! ") -> blocks += Block(Kind.WARN, line.drop(2))
                 line.startsWith("> ") -> blocks += Block(Kind.TIP, line.drop(2))
+                line.startsWith("@ ") -> {
+                    val parts = line.drop(2).split("|", limit = 2).map { it.trim() }
+                    require(parts.size == 2 && parts[1].isNotBlank()) { "Image needs a path and caption: $line" }
+                    require(validImagePath(parts[0])) { "Invalid image path: ${parts[0]}" }
+                    blocks += Block(Kind.IMAGE, parts[1], imagePath = parts[0])
+                }
                 else -> {
                     val m = stepRegex.matchEntire(line)
                     blocks += if (m != null) Block(Kind.STEP, m.groupValues[2], m.groupValues[1].toInt())
@@ -90,6 +97,9 @@ object GuideParser {
         require(parts.size == n) { "Expected $n fields in: $s" }
         return parts.toTypedArray()
     }
+
+    fun validImagePath(path: String): Boolean =
+        Regex("[a-z0-9_-]+(?:/[a-z0-9_-]+)*\\.(webp|png|jpg|jpeg|xml)").matches(path)
 
     fun parseQuiz(text: String): List<Question> =
         text.split(Regex("""\n\s*\n""")).mapNotNull { chunk ->

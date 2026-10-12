@@ -18,10 +18,17 @@ To show mourning, first raise the flag to the top, then lower it to halfway. Bef
 # flag-folding | Folding the Flag | The triangle fold
 This takes two people.
 1. Fold the flag in half lengthwise, stripes over stars.
+@ flag/fold-1.xml | Step 1: Fold the flag in half lengthwise, stripes over stars.
 2. Fold it in half lengthwise again, keeping the blue field on the outside.
+@ flag/fold-2.xml | Step 2: Fold it in half lengthwise again, keeping the blue field on the outside.
 3. Starting at the striped end, make a triangle fold by bringing the corner up to meet the top edge.
+@ flag/fold-3.xml | Step 3: Starting at the striped end, make a triangle fold by bringing the corner up to meet the top edge.
 4. Keep folding in triangles all the way down the flag.
+@ flag/fold-4.xml | Step 4: Keep folding in triangles all the way down the flag.
 5. Tuck the remaining edge into the folds. Only the blue field with stars should show.
+@ flag/fold-5.xml | Step 5: Tuck the remaining edge into the folds. Only the blue field with stars should show.
+
+
 
 # flag-ceremony | Flag Ceremonies | Opening and closing
 ## Opening ceremony

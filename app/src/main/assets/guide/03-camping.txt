@@ -52,6 +52,7 @@ These items help you stay safe and comfortable on any hike or campout.
 - Game trails and ant hills
 - Fragile meadows and plants
 > Use existing campsites whenever possible. Good campsites are found, not made.
+@ camping/campsite-comparison.webp | Left: level established ground clear of overhead hazards. Right: avoid dry washes and dead or hanging branches.
 
 # tents | Pitching a Tent | Step by step
 1. Clear the spot of sticks and stones. Do not dig trenches.
@@ -65,6 +66,7 @@ These items help you stay safe and comfortable on any hike or campout.
 - No food, snacks, toothpaste, or scented items in tents. Animals will come looking.
 - No flames, stoves, or heaters in or near tents.
 - Take off muddy boots before going inside.
+@ camping/tent-rainfly.webp | A separate rainfly sheds rain while leaving an air gap above the inner tent; secure guylines clear of the doorway.
 
 # sleeping-warm | Sleeping Warm | Stay comfortable at night
 - Put a sleeping pad under your bag. The cold ground steals more heat than the air.
@@ -82,6 +84,7 @@ These items help you stay safe and comfortable on any hike or campout.
 - Kitchen at least 200 feet from tents in bear country, downwind
 - Fire ring away from tents and overhanging branches
 - Dishwashing and gray water area away from water sources
+@ camping/layout.xml | Keep sleeping and cooking areas separate. In bear country, the guide calls for at least 200 feet, with the kitchen downwind.
 ## Duty roster
 Rotate jobs so everyone learns and everyone helps. Common jobs:
 - Cooks: prepare meals

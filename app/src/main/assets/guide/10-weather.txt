@@ -40,6 +40,7 @@ Three leaflets, the middle one on a longer stem. Can be a vine, a ground cover, 
 Three leaflets with rounded lobes, like an oak leaf. Grows as a shrub, mostly in the West and Southeast.
 ## Poison sumac
 A shrub or small tree with 7 to 13 leaflets on red stems. Grows in swampy areas.
+@ nature/poison-plants.xml | Ivy: three leaflets with a longer middle stalk. Oak: three lobed leaflets. Sumac: 7–13 smooth leaflets on red stems. Shapes vary.
 ## If you touch them
 - Wash with soap and cool water as soon as possible.
 - Wash clothing and tools.

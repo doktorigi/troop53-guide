@@ -7,6 +7,7 @@
 - Magnetic needle: the red end points to magnetic north.
 - Orienting arrow: the outline arrow inside the housing.
 - Orienting lines: lines in the housing that line up with north-south lines on a map.
+@ navigation/compass.xml | The baseplate, travel arrow, rotating housing, magnetic needle, and orienting arrow.
 ## Directions in degrees
 - North 0 or 360, East 90, South 180, West 270
 - Northeast 45, Southeast 135, Southwest 225, Northwest 315
@@ -22,6 +23,7 @@
 2. Hold the compass flat and turn your whole body until red is in the shed.
 3. Look along the direction-of-travel arrow and pick a landmark like a tree or rock.
 4. Walk to the landmark. Repeat until you arrive.
+@ navigation/red-in-shed.xml | Hold the compass level. Turn until the red needle aligns with the orienting arrow.
 > Going back? Add 180 degrees to your bearing (or subtract 180 if it is over 180) to get the back bearing.
 
 # topo-maps | Reading Topographic Maps | Contours and symbols
@@ -38,6 +40,7 @@ A topographic map shows the shape of the land.
 - Lines close together mean steep ground. Lines far apart mean gentle ground.
 - Circles inside circles show hilltops.
 - V shapes pointing uphill show valleys and streams.
+@ navigation/contours.xml | Closed contours climb toward the hilltop. Valley contours point upstream, against the stream flow.
 ## Scale
 The scale bar tells you distance. On a 1:24,000 map, one inch equals 2,000 feet.
 > Orient the map: lay the compass on the map, then turn the map until its north lines up with the compass needle (after declination).
@@ -66,8 +69,10 @@ The sun rises in the east and sets in the west. At midday in the U.S. it is in t
 2. Mark the tip of its shadow with a pebble.
 3. Wait 15 to 20 minutes and mark the new tip.
 4. A line from the first mark to the second runs roughly west to east.
+@ navigation/shadow-stick.xml | First shadow tip is roughly west; second tip is roughly east. Mark the tips 15–20 minutes apart.
 ## North Star
 Find the Big Dipper. The two stars at the end of the cup point to Polaris, the North Star, about five times the distance between them. Polaris is almost exactly north.
+@ navigation/polaris.xml | Extend the line from Merak through Dubhe about five pointer-star spacings to Polaris.
 > Moss and tree growth are unreliable direction clues. Use them only as a last resort.
 
 # distance | Measuring Distance and Height | Pace counts and estimates

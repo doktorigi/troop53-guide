@@ -58,4 +58,60 @@ class GuideTest {
             assertTrue(q.prompt, q.explanation.isNotBlank())
         }
     }
+
+    @Test fun imageBlocksKeepCaptionAndPathSeparate() {
+        val a = GuideParser.parse("=== x | X | i | #112233 | s\n# a | A | s\n@ knots/bowline-3.webp | Around the tree | behind the standing part").single().articles.single()
+        val block = a.blocks.single()
+        assertEquals(Kind.IMAGE, block.kind)
+        assertEquals("knots/bowline-3.webp", block.imagePath)
+        assertEquals("Around the tree | behind the standing part", block.text)
+        assertTrue(a.searchText.contains("around the tree"))
+        assertTrue(!a.searchText.contains(".webp"))
+    }
+
+    @Test fun imagesRejectUnsafePathsAndMissingCaptions() {
+        listOf("../bowline.webp | c", "/bowline.webp | c", "knots\\bowline.webp | c",
+            "https://example.com/a.webp | c", "bowline.gif | c", "bowline.webp", "bowline.webp | ").forEach { image ->
+            try {
+                GuideParser.parse("=== x | X | i | #112233 | s\n# a | A | s\n@ $image")
+                throw AssertionError("Accepted invalid image: $image")
+            } catch (_: IllegalArgumentException) { }
+        }
+    }
+
+    @Test fun everyImageHasAnAssetAndEveryVectorHasACompiledTwin() {
+        val images = guide.articles.flatMap { it.blocks }.filter { it.kind == Kind.IMAGE }
+        assertTrue(images.size >= 70)
+        images.forEach { b ->
+            val path = requireNotNull(b.imagePath)
+            assertTrue(path, assets.resolve("img/$path").isFile)
+            assertTrue(path, b.text.isNotBlank())
+            if (path.endsWith(".xml")) {
+                val name = "img_" + path.removeSuffix(".xml").replace('/', '_').replace('-', '_') + ".xml"
+                val resource = File("src/main/res/drawable/$name")
+                assertTrue(path, resource.isFile)
+                assertEquals(path, assets.resolve("img/$path").readText(), resource.readText())
+                Regex("android:pathData=\"([^\"]+)\"").findAll(resource.readText()).forEach { match ->
+                    assertTrue("$path exceeds Android string pool limit", match.groupValues[1].length < 32000)
+                }
+            }
+        }
+        guide.categories.forEach { c ->
+            assertTrue(c.id, assets.resolve("img/headers/${c.id}.xml").isFile)
+            assertTrue(c.id, File("src/main/res/drawable/img_headers_${c.id}.xml").isFile)
+        }
+    }
+
+    @Test fun eachNumberedKnotAndLashingStepHasItsOwnDiagramImmediatelyBelow() {
+        guide.category("knots").articles.forEach { a ->
+            a.blocks.forEachIndexed { i, b ->
+                if (b.kind == Kind.STEP) {
+                    val next = a.blocks.getOrNull(i + 1)
+                    assertEquals("${a.id} step ${b.number}", Kind.IMAGE, next?.kind)
+                    assertEquals("knots/${a.id}-${b.number}.xml", next?.imagePath)
+                    assertTrue(next!!.text.contains(b.text))
+                }
+            }
+        }
+    }
 }

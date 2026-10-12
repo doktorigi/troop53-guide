@@ -6,6 +6,8 @@ local.properties
 dist/
 art/*-device.png
 art/*device.mp4
+art/reference/
+art/preview/
 **/__pycache__/
 *.keystore
 *.jks

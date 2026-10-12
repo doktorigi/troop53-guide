@@ -25,6 +25,7 @@ CPR keeps blood moving to the brain until help arrives. Take a CPR class; this i
 1. Make sure the scene is safe. Tap and shout. If no response and they are not breathing or only gasping, call 911 and get an AED.
 2. Place the person on their back on a firm surface.
 3. Put the heel of one hand on the center of the chest, the other hand on top. Lock your elbows, shoulders over your hands.
+@ firstaid/cpr.xml | For an adult or teen, center stacked hands on the chest; keep elbows straight and shoulders over hands.
 4. Push hard and fast: about 2 inches deep, 100 to 120 times a minute. Let the chest come all the way back up.
 5. If trained, give 2 rescue breaths after every 30 compressions: tilt the head back, lift the chin, pinch the nose, and breathe until the chest rises.
 6. If not trained or not willing to give breaths, do hands-only CPR: keep pushing without stopping.
@@ -125,7 +126,9 @@ Remember RICE:
 3. For an open fracture, cover the wound with a sterile dressing. Do not push the bone back in.
 4. Splint it as you found it. The splint should reach past the joints above and below the break.
 5. Pad the splint with cloth and tie it in place, not too tight. Check fingers or toes for warmth and color.
+@ firstaid/splint.xml | Pad a forearm splint, support past the joints, secure away from the injury, and keep fingers visible.
 6. For a forearm or wrist, use a sling to support the arm.
+@ firstaid/sling.xml | A sling supports the forearm. Pad the knot and leave fingers visible to check circulation.
 7. Treat for shock.
 > Splints can be made from sticks, rolled newspaper, trekking poles, or a sleeping pad.
 
@@ -210,6 +213,7 @@ A severe allergic reaction to stings, foods, or medicines. Signs include trouble
 
 # ticks | Tick Bites | Remove ticks safely
 Ticks can carry Lyme disease and other illnesses. Check yourself, your buddy, and your gear every day.
+@ firstaid/tick.xml | Grip the tick close to the skin with fine-tipped tweezers and pull steadily upward; do not twist.
 1. Use fine-tipped tweezers to grab the tick as close to the skin as possible.
 2. Pull straight out with steady pressure. Do not twist, squeeze, or burn it.
 3. Wash the bite and your hands with soap and water.
@@ -279,6 +283,7 @@ Most snakes are harmless, but treat every bite from an unknown snake as venomous
 2. Do not hold them down or put anything in their mouth.
 3. Time the seizure. Call 911 if it lasts more than 5 minutes or is their first seizure.
 4. When it ends, roll them onto their side and let them rest.
+@ firstaid/recovery.xml | After a seizure, if breathing normally, rest on the side with the airway open and upper knee bent. Keep checking breathing.
 
 # first-aid-kit | Personal First Aid Kit | What to carry
 Every Scout should carry a small personal kit.

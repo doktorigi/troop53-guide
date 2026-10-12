@@ -24,6 +24,7 @@ Gather all three before you light. Gather twice as much as you think you need.
 - Log cabin: build a square of sticks around a teepee. Burns steady, good for cooking coals.
 - Lean-to: lean kindling against a larger stick over the tinder. Good in wind.
 - Star: push long logs into the center as they burn. Saves wood.
+@ fire/lays.xml | Teepee, log cabin, lean-to, and star fire lays, shown before lighting.
 > Wood should snap when you break it. If it bends, it is too green or damp.
 
 # fire-starting | Lighting a Fire | Matches, lighters, and ferro rods
@@ -42,4 +43,5 @@ Scrape the striker down the rod firmly, aiming sparks into a nest of very fine, 
 3. Stir it: mix the ashes and embers with a stick or shovel.
 4. Drown it again.
 5. Feel it: hold the back of your hand near the ashes. If you feel any heat, repeat.
+@ fire/drown-stir-feel.xml | Drown with water, stir thoroughly, and check for heat with your hand near the ashes. Repeat until cold.
 ! It is not out until it is cold out. Never bury a fire with dirt only; it can smolder for days.

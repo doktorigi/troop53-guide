@@ -29,6 +29,7 @@ Never swim out to save someone unless you are trained in lifesaving. A panicking
 2. Throw: throw something that floats, like a ring buoy, life jacket, or cooler, ideally tied to a rope.
 3. Row: use a boat to get to them, and have them hold the stern while you row to shore.
 4. Go: only trained lifeguards should swim to a victim, with rescue equipment.
+@ water/rescue.xml | Reach from a stable position, throw flotation, row with safe equipment, and leave swimming rescues to trained rescuers.
 ! Shout for help and send someone to call 911 while you help.
 
 # life-jackets | Life Jackets | Fit it right

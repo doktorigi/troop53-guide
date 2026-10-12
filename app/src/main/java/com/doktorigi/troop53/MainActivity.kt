@@ -1,6 +1,7 @@
 package com.doktorigi.troop53
 
 import android.app.Activity
+import android.app.Dialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.SharedPreferences
@@ -19,6 +20,7 @@ import android.text.style.StyleSpan
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -247,6 +249,7 @@ class MainActivity : Activity() {
         band.addView(text("${c.icon}  ${c.title}", 26f, Color.WHITE, bold = true))
         band.addView(text(c.subtitle, 14f, 0xDDFFFFFF.toInt()).apply { setPadding(0, dp(4), 0, 0) })
         col.addView(band)
+        col.addView(imageCard(Block(Kind.IMAGE, "${c.title} field illustration", imagePath = "headers/${c.id}.xml")), lp(margin = 16, top = 14))
         c.articles.forEach { col.addView(articleRow(it, showCategory = false)) }
         col.addView(View(this), lp(top = 24))
         return page(topBar(c.color.toInt(), ""), scroll(col))
@@ -299,6 +302,8 @@ class MainActivity : Activity() {
         col.addView(band)
 
         val body = column().apply { setPadding(dp(20), dp(12), dp(20), dp(8)) }
+        val diagrams = a.blocks.filter { it.kind == Kind.IMAGE && it.imagePath?.startsWith("knots/") == true }
+        if (diagrams.isNotEmpty()) body.addView(navButton("Knot Practice  ›", Gravity.CENTER) { practice(a, diagrams) })
         a.blocks.forEach { body.addView(blockView(it, color)) }
         col.addView(body)
 
@@ -338,6 +343,62 @@ class MainActivity : Activity() {
         }, b.text, dp(26))
         Kind.WARN -> callout("⚠  ", b.text, 0xFFFBE3DF.toInt(), RED)
         Kind.TIP -> callout("Tip  ", b.text, 0xFFF1E8CF.toInt(), 0xFF7A5A2E.toInt())
+        Kind.IMAGE -> imageCard(b)
+    }
+
+    private fun imageCard(b: Block): View = column().apply {
+        background = rounded(CARD, 16f, LINE)
+        setPadding(dp(8), dp(8), dp(8), dp(10))
+        val path = requireNotNull(b.imagePath)
+        addView(IllustrationView(this@MainActivity, path, b.text).apply {
+            setOnClickListener { showImage(b) }
+        }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
+        addView(text(b.text, 13f, MUTED).apply { para(); setPadding(dp(6), dp(8), dp(6), 0) })
+        addView(text("Tap to enlarge", 11f, RED).apply { setPadding(dp(6), dp(4), 0, 0) })
+        layoutParams = lp(top = 10)
+    }
+
+    private fun fullScreenDialog(): Dialog = Dialog(this, android.R.style.Theme_Material_Light_NoActionBar_Fullscreen).apply {
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+    }
+
+    private fun showImage(b: Block) {
+        val dialog = fullScreenDialog()
+        val col = column()
+        val image = IllustrationView(this, requireNotNull(b.imagePath), b.text, zoomable = true)
+        col.addView(text(b.text, 16f, FOREST, bold = true).apply { setPadding(dp(16), dp(16), dp(16), dp(8)) })
+        col.addView(text("Pinch to zoom · Drag to move · Double-tap to zoom/reset", 13f, MUTED).apply { setPadding(dp(16), 0, dp(16), dp(8)) })
+        col.addView(image, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f))
+        val controls = LinearLayout(this)
+        listOf("−" to { image.zoomBy(0.7f) }, "+" to { image.zoomBy(1.4f) }, "Reset" to { image.setZoom(1f) }, "Close" to { dialog.dismiss() }).forEach { (label, action) ->
+            controls.addView(navButton(label, Gravity.CENTER, action).apply {
+                contentDescription = when (label) { "+" -> "Zoom in"; "−" -> "Zoom out"; else -> label }
+                minimumHeight = dp(48)
+            }, weightLp(gap = 4))
+        }
+        col.addView(controls, lp(margin = 8, top = 8))
+        col.setPadding(0, 0, 0, dp(12))
+        dialog.setContentView(col); dialog.show()
+        dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+    }
+
+    private fun practice(a: Article, diagrams: List<Block>) {
+        val dialog = fullScreenDialog()
+        var index = 0
+        fun draw() {
+            val col = column().apply { setPadding(dp(16), dp(16), dp(16), dp(16)) }
+            col.addView(text(a.title, 26f, FOREST, bold = true))
+            col.addView(text("Step ${index + 1} of ${diagrams.size}", 14f, MUTED).apply { accessibilityLiveRegion = View.ACCESSIBILITY_LIVE_REGION_POLITE })
+            col.addView(scroll(column().apply { addView(imageCard(diagrams[index])) }), LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f))
+            val nav = LinearLayout(this)
+            nav.addView(navButton("Back", Gravity.CENTER) { if (index > 0) { index--; draw() } }.apply { isEnabled = index > 0; alpha = if (isEnabled) 1f else 0.4f; minimumHeight = dp(56) }, weightLp())
+            nav.addView(navButton(if (index == diagrams.lastIndex) "Done" else "Next", Gravity.CENTER) {
+                if (index == diagrams.lastIndex) dialog.dismiss() else { index++; draw() }
+            }.apply { minimumHeight = dp(56) }, weightLp(gap = 10))
+            col.addView(nav); col.addView(navButton("Close practice", Gravity.CENTER) { dialog.dismiss() })
+            dialog.setContentView(col)
+        }
+        draw(); dialog.show(); dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
     }
 
     private fun markerRow(marker: TextView, body: String, markerWidth: Int) = LinearLayout(this).apply {

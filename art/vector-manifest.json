@@ -1,0 +1,536 @@
+[
+  {
+    "path": "knots/rope-care-1.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/common-whipping-knot",
+    "check": "Twine bight points to end; bury it under wraps."
+  },
+  {
+    "path": "knots/rope-care-2.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/common-whipping-knot",
+    "check": "Twine bight points to end; bury it under wraps."
+  },
+  {
+    "path": "knots/rope-care-3.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/common-whipping-knot",
+    "check": "Twine bight points to end; bury it under wraps."
+  },
+  {
+    "path": "knots/rope-care-4.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/common-whipping-knot",
+    "check": "Twine bight points to end; bury it under wraps."
+  },
+  {
+    "path": "knots/square-knot-1.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/square-knot",
+    "check": "Reversed half-knots, alternating crossings, paired same-rope ends."
+  },
+  {
+    "path": "knots/square-knot-2.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/square-knot",
+    "check": "Reversed half-knots, alternating crossings, paired same-rope ends."
+  },
+  {
+    "path": "knots/square-knot-3.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/square-knot",
+    "check": "Reversed half-knots, alternating crossings, paired same-rope ends."
+  },
+  {
+    "path": "knots/square-knot-4.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/square-knot",
+    "check": "Reversed half-knots, alternating crossings, paired same-rope ends."
+  },
+  {
+    "path": "knots/two-half-hitches-1.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/two-half-hitches-knot",
+    "check": "Both half hitches turn in the same direction around standing part."
+  },
+  {
+    "path": "knots/two-half-hitches-2.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/two-half-hitches-knot",
+    "check": "Both half hitches turn in the same direction around standing part."
+  },
+  {
+    "path": "knots/two-half-hitches-3.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/two-half-hitches-knot",
+    "check": "Both half hitches turn in the same direction around standing part."
+  },
+  {
+    "path": "knots/two-half-hitches-4.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/two-half-hitches-knot",
+    "check": "Both half hitches turn in the same direction around standing part."
+  },
+  {
+    "path": "knots/taut-line-1.xml",
+    "caption": "",
+    "reference": "https://filestore.scouting.org/filestore/training/pdf/510-033(17)BALOO.pdf#page=98",
+    "check": "Scout taut-line: two inside wraps toward stake, one outside half hitch; not the midshipman variant."
+  },
+  {
+    "path": "knots/taut-line-2.xml",
+    "caption": "",
+    "reference": "https://filestore.scouting.org/filestore/training/pdf/510-033(17)BALOO.pdf#page=98",
+    "check": "Scout taut-line: two inside wraps toward stake, one outside half hitch; not the midshipman variant."
+  },
+  {
+    "path": "knots/taut-line-3.xml",
+    "caption": "",
+    "reference": "https://filestore.scouting.org/filestore/training/pdf/510-033(17)BALOO.pdf#page=98",
+    "check": "Scout taut-line: two inside wraps toward stake, one outside half hitch; not the midshipman variant."
+  },
+  {
+    "path": "knots/taut-line-4.xml",
+    "caption": "",
+    "reference": "https://filestore.scouting.org/filestore/training/pdf/510-033(17)BALOO.pdf#page=98",
+    "check": "Scout taut-line: two inside wraps toward stake, one outside half hitch; not the midshipman variant."
+  },
+  {
+    "path": "knots/bowline-1.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/bowline-knot",
+    "check": "Nipping loop, collar behind standing part, returning tail inside large loop."
+  },
+  {
+    "path": "knots/bowline-2.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/bowline-knot",
+    "check": "Nipping loop, collar behind standing part, returning tail inside large loop."
+  },
+  {
+    "path": "knots/bowline-3.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/bowline-knot",
+    "check": "Nipping loop, collar behind standing part, returning tail inside large loop."
+  },
+  {
+    "path": "knots/bowline-4.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/bowline-knot",
+    "check": "Nipping loop, collar behind standing part, returning tail inside large loop."
+  },
+  {
+    "path": "knots/bowline-5.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/bowline-knot",
+    "check": "Nipping loop, collar behind standing part, returning tail inside large loop."
+  },
+  {
+    "path": "knots/clove-hitch-1.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/clove-hitch-knot-rope-end",
+    "check": "Two pole turns, crossed bridge, end tucked beneath bridge."
+  },
+  {
+    "path": "knots/clove-hitch-2.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/clove-hitch-knot-rope-end",
+    "check": "Two pole turns, crossed bridge, end tucked beneath bridge."
+  },
+  {
+    "path": "knots/clove-hitch-3.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/clove-hitch-knot-rope-end",
+    "check": "Two pole turns, crossed bridge, end tucked beneath bridge."
+  },
+  {
+    "path": "knots/clove-hitch-4.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/clove-hitch-knot-rope-end",
+    "check": "Two pole turns, crossed bridge, end tucked beneath bridge."
+  },
+  {
+    "path": "knots/timber-hitch-1.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/timber-hitch-knot",
+    "check": "End encircles standing part then twists around its own leg at least three times."
+  },
+  {
+    "path": "knots/timber-hitch-2.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/timber-hitch-knot",
+    "check": "End encircles standing part then twists around its own leg at least three times."
+  },
+  {
+    "path": "knots/timber-hitch-3.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/timber-hitch-knot",
+    "check": "End encircles standing part then twists around its own leg at least three times."
+  },
+  {
+    "path": "knots/timber-hitch-4.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/timber-hitch-knot",
+    "check": "End encircles standing part then twists around its own leg at least three times."
+  },
+  {
+    "path": "knots/sheet-bend-1.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/sheet-bend-knot",
+    "check": "Bight in thick rope; thin rope behind both legs then under itself; tails same side."
+  },
+  {
+    "path": "knots/sheet-bend-2.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/sheet-bend-knot",
+    "check": "Bight in thick rope; thin rope behind both legs then under itself; tails same side."
+  },
+  {
+    "path": "knots/sheet-bend-3.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/sheet-bend-knot",
+    "check": "Bight in thick rope; thin rope behind both legs then under itself; tails same side."
+  },
+  {
+    "path": "knots/sheet-bend-4.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/sheet-bend-knot",
+    "check": "Bight in thick rope; thin rope behind both legs then under itself; tails same side."
+  },
+  {
+    "path": "knots/sheet-bend-5.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/sheet-bend-knot",
+    "check": "Bight in thick rope; thin rope behind both legs then under itself; tails same side."
+  },
+  {
+    "path": "knots/figure-eight-1.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/figure-8-knot",
+    "check": "End around standing part then through initial loop; three alternating crossings."
+  },
+  {
+    "path": "knots/figure-eight-2.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/figure-8-knot",
+    "check": "End around standing part then through initial loop; three alternating crossings."
+  },
+  {
+    "path": "knots/figure-eight-3.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/figure-8-knot",
+    "check": "End around standing part then through initial loop; three alternating crossings."
+  },
+  {
+    "path": "knots/figure-eight-4.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/figure-8-knot",
+    "check": "End around standing part then through initial loop; three alternating crossings."
+  },
+  {
+    "path": "knots/square-lashing-1.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/square-lashing-knot",
+    "check": "Start below crosspiece, over/behind wraps, fraps in gap; guide uses the traditional crosspiece clove finish."
+  },
+  {
+    "path": "knots/square-lashing-2.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/square-lashing-knot",
+    "check": "Start below crosspiece, over/behind wraps, fraps in gap; guide uses the traditional crosspiece clove finish."
+  },
+  {
+    "path": "knots/square-lashing-3.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/square-lashing-knot",
+    "check": "Start below crosspiece, over/behind wraps, fraps in gap; guide uses the traditional crosspiece clove finish."
+  },
+  {
+    "path": "knots/square-lashing-4.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/square-lashing-knot",
+    "check": "Start below crosspiece, over/behind wraps, fraps in gap; guide uses the traditional crosspiece clove finish."
+  },
+  {
+    "path": "knots/diagonal-lashing-1.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/diagonal-lashing-knot",
+    "check": "Timber hitch around both poles, both wrap directions, fraps, single pole clove finish."
+  },
+  {
+    "path": "knots/diagonal-lashing-2.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/diagonal-lashing-knot",
+    "check": "Timber hitch around both poles, both wrap directions, fraps, single pole clove finish."
+  },
+  {
+    "path": "knots/diagonal-lashing-3.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/diagonal-lashing-knot",
+    "check": "Timber hitch around both poles, both wrap directions, fraps, single pole clove finish."
+  },
+  {
+    "path": "knots/diagonal-lashing-4.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/diagonal-lashing-knot",
+    "check": "Timber hitch around both poles, both wrap directions, fraps, single pole clove finish."
+  },
+  {
+    "path": "knots/diagonal-lashing-5.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/diagonal-lashing-knot",
+    "check": "Timber hitch around both poles, both wrap directions, fraps, single pole clove finish."
+  },
+  {
+    "path": "knots/shear-lashing-1.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/shear-lashing-knot",
+    "check": "Clove on one pole, wraps around both, fraps between, clove on other, spread legs."
+  },
+  {
+    "path": "knots/shear-lashing-2.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/shear-lashing-knot",
+    "check": "Clove on one pole, wraps around both, fraps between, clove on other, spread legs."
+  },
+  {
+    "path": "knots/shear-lashing-3.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/shear-lashing-knot",
+    "check": "Clove on one pole, wraps around both, fraps between, clove on other, spread legs."
+  },
+  {
+    "path": "knots/shear-lashing-4.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/shear-lashing-knot",
+    "check": "Clove on one pole, wraps around both, fraps between, clove on other, spread legs."
+  },
+  {
+    "path": "knots/shear-lashing-5.xml",
+    "caption": "",
+    "reference": "https://www.animatedknots.com/shear-lashing-knot",
+    "check": "Clove on one pole, wraps around both, fraps between, clove on other, spread legs."
+  },
+  {
+    "path": "headers/basics.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/firstaid.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/camping.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/cooking.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/fire.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/knots.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/navigation.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/hiking.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/survival.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/nature.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/water.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/tools.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/lnt.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/flag.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "headers/prepared.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "navigation/compass.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "navigation/red-in-shed.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "navigation/contours.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "navigation/polaris.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "navigation/shadow-stick.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "fire/lays.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "fire/drown-stir-feel.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "firstaid/cpr.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "firstaid/tick.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "firstaid/sling.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "firstaid/splint.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "firstaid/recovery.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "nature/poison-plants.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "survival/debris-hut.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "survival/signals.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "water/rescue.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "camping/layout.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "flag/fold-1.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "flag/fold-2.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "flag/fold-3.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "flag/fold-4.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  },
+  {
+    "path": "flag/fold-5.xml",
+    "caption": "",
+    "reference": "",
+    "check": ""
+  }
+]

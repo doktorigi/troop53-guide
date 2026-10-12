@@ -29,6 +29,7 @@ So your priorities are usually: first aid and safety, shelter, signaling, water,
 2. Lean sticks along both sides to make ribs.
 3. Pile leaves and debris on top, at least 2 feet thick.
 4. Stuff the inside with dry leaves and crawl in feet first.
+@ survival/debris-hut.xml | Debris hut cross-section: sturdy ridgepole and ribs, at least two feet of dry debris, and thick ground insulation.
 ! Avoid dead trees overhead, dry streambeds, and avalanche or rockfall paths.
 
 # signaling | Signaling for Help | Make yourself easy to find
@@ -40,6 +41,7 @@ So your priorities are usually: first aid and safety, shelter, signaling, water,
 - Smoke: green leaves on a fire make white smoke visible in the day.
 - At night, use a flashlight: three flashes.
 - Phone: if you have any signal, call or text 911. A text may get through when a call cannot.
+@ survival/signals.xml | Large ground-to-air signals: V means need help; X means need medical help. A whistle signal is three blasts, repeated.
 
 # survival-water | Finding Water | When your bottle is empty
 - Look for water downhill, in valleys, and where plants are thick and green.
