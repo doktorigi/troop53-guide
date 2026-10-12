@@ -1,0 +1,92 @@
+=== knots | Knots and Lashings | 🪢 | #7A5A2E | Essential knots, hitches, and lashings
+
+# rope-care | Rope Care | Whipping and fusing ends
+The end of a rope is the working end. The long unused part is the standing part. A loop made by folding the rope back on itself is a bight.
+## Whipping a rope end
+1. Make a loop of thin twine along the rope with the loop pointing toward the end.
+2. Wrap the twine tightly around the rope and the loop, working toward the end, about as wide as the rope is thick.
+3. Slip the end of the twine through the loop.
+4. Pull the other end of the twine to draw the loop under the wraps. Trim both ends.
+## Fusing
+Synthetic rope can be fused by carefully melting the end with a flame. Do it outside with adult supervision. The melted plastic is very hot; do not touch it.
+> Keep rope dry, coil it neatly, and do not step on it.
+
+# square-knot | Square Knot | Join two ropes of the same size
+Use it to tie bandages, bundles, and two ends of the same rope.
+1. Take one end in each hand.
+2. Pass the right end over the left and under. "Right over left."
+3. Bring the ends back up. Pass the left end over the right and under. "Left over right."
+4. Pull tight. Both parts of each rope lie side by side.
+! If the ends stick out at an angle, you tied a granny knot. Untie it and try again.
+! Never use a square knot for climbing or to join ropes of different sizes. It can slip.
+
+# two-half-hitches | Two Half Hitches | Tie a rope to a post
+Use it to tie a rope to a tree, post, or ring, such as a clothesline.
+1. Pass the end around the post.
+2. Bring it over the standing part, then around and back through the loop you just made. That is one half hitch.
+3. Do it again in the same direction below the first.
+4. Slide the hitches snug against the post.
+
+# taut-line | Taut-Line Hitch | An adjustable loop
+Use it for tent guylines because it slides to tighten and holds under tension.
+1. Pass the rope around a stake or tree.
+2. Bring the end around the standing part and through the loop, making two wraps inside the loop toward the stake.
+3. Bring the end around the standing part once more, outside the loop, and through.
+4. Tighten. Slide the knot up to tighten the line, down to loosen.
+
+# bowline | Bowline | A loop that will not slip
+A rescue knot. The loop does not tighten under load, so it can go around a person.
+1. Make a small overhand loop in the standing part. This is the rabbit hole.
+2. The rabbit (working end) comes up through the hole.
+3. Goes around the back of the tree (the standing part).
+4. And back down the hole.
+5. Hold the rabbit and loop together and pull the standing part to tighten.
+> Practice tying it around your own waist and with your eyes closed.
+
+# clove-hitch | Clove Hitch | Start and finish lashings
+1. Wrap the rope around the pole.
+2. Cross over the first wrap and go around the pole again.
+3. Tuck the end under the second wrap so it comes out between the wraps, going the opposite direction from the standing part.
+4. Pull tight. The knot looks like an X with ends going opposite ways.
+
+# timber-hitch | Timber Hitch | Drag a log or start a diagonal lashing
+1. Pass the rope around the log.
+2. Wrap the end around the standing part once.
+3. Twist the end around itself three or more times.
+4. Pull the standing part so the hitch grips the log. It comes loose easily when the pull stops.
+
+# sheet-bend | Sheet Bend | Join ropes of different sizes
+1. Make a bight in the end of the thicker rope.
+2. Pass the end of the thinner rope up through the bight.
+3. Wrap it around behind both parts of the bight.
+4. Tuck it under itself, not under the bight.
+5. Pull tight.
+
+# figure-eight | Figure Eight | A stopper knot
+Use it to keep a rope from sliding through a hole or pulley.
+1. Make a loop near the end of the rope.
+2. Pass the end around the standing part.
+3. Tuck the end back down through the first loop.
+4. Pull tight. It should look like the number 8.
+
+# square-lashing | Square Lashing | Bind poles at a right angle
+1. Tie a clove hitch on the upright pole just below where the crosspiece will sit.
+2. Wrap the rope over the crosspiece, behind the upright, under the crosspiece, and behind the upright again. Make 3 or 4 wraps.
+3. Make 2 or 3 frapping turns: wrap between the poles, around the wraps, pulling tight.
+4. Finish with a clove hitch on the crosspiece.
+> Used for building camp gadgets like tables, racks, and towers.
+
+# diagonal-lashing | Diagonal Lashing | Spring poles together
+Used when poles cross at an angle and need to be pulled together, like an X brace.
+1. Tie a timber hitch around both poles where they cross.
+2. Make 3 wraps around the poles in the same direction as the timber hitch.
+3. Make 3 wraps the other direction, across the first ones.
+4. Add 2 frapping turns between the poles.
+5. Finish with a clove hitch.
+
+# shear-lashing | Shear Lashing | Make an A-frame or tripod
+1. Lay two poles side by side. Tie a clove hitch to one pole.
+2. Wrap loosely around both poles 7 or 8 times.
+3. Make 2 frapping turns between the poles.
+4. Finish with a clove hitch on the other pole.
+5. Spread the poles apart to make an A-frame. For a tripod, use three poles and weave the wraps over and under.

@@ -1,0 +1,80 @@
+=== navigation | Navigation | 🧭 | #24577A | Maps, compasses, and finding your way
+
+# compass-parts | Parts of a Compass | Know your baseplate compass
+- Baseplate: the clear plastic base with a ruler on its edge.
+- Direction-of-travel arrow: points the way you will go.
+- Housing (dial): the rotating ring marked with degrees from 0 to 360.
+- Magnetic needle: the red end points to magnetic north.
+- Orienting arrow: the outline arrow inside the housing.
+- Orienting lines: lines in the housing that line up with north-south lines on a map.
+## Directions in degrees
+- North 0 or 360, East 90, South 180, West 270
+- Northeast 45, Southeast 135, Southwest 225, Northwest 315
+! Keep the compass away from metal, phones, and magnets. They throw off the needle.
+
+# bearings | Taking and Following a Bearing | Walk a straight line
+## Taking a bearing to a landmark
+1. Hold the compass flat in front of you, direction-of-travel arrow pointing at the landmark.
+2. Turn the housing until the orienting arrow lines up under the red needle. "Put red in the shed."
+3. Read the degrees at the index line. That is your bearing.
+## Following a bearing
+1. Set the bearing on the dial.
+2. Hold the compass flat and turn your whole body until red is in the shed.
+3. Look along the direction-of-travel arrow and pick a landmark like a tree or rock.
+4. Walk to the landmark. Repeat until you arrive.
+> Going back? Add 180 degrees to your bearing (or subtract 180 if it is over 180) to get the back bearing.
+
+# topo-maps | Reading Topographic Maps | Contours and symbols
+A topographic map shows the shape of the land.
+## Map colors
+- Green: woods and vegetation
+- White: open areas
+- Blue: water, such as lakes, rivers, and swamps
+- Brown: contour lines (elevation)
+- Black: buildings, roads, trails, and names
+- Red: major roads and survey lines
+## Contour lines
+- Each line connects points at the same elevation.
+- Lines close together mean steep ground. Lines far apart mean gentle ground.
+- Circles inside circles show hilltops.
+- V shapes pointing uphill show valleys and streams.
+## Scale
+The scale bar tells you distance. On a 1:24,000 map, one inch equals 2,000 feet.
+> Orient the map: lay the compass on the map, then turn the map until its north lines up with the compass needle (after declination).
+
+# declination | Declination | True north vs magnetic north
+Maps point to true north (the North Pole). Compass needles point to magnetic north, which is in a different place. The angle between them is declination.
+- Find the declination for your area on the map margin or online.
+- In much of the eastern U.S. declination is west; in the west it is east. It changes slowly over the years.
+- Many compasses have an adjustable declination setting. Set it once and forget it.
+## Without an adjustable compass
+- Map to field: if declination is west, add it to the map bearing. If east, subtract.
+- Field to map: do the opposite.
+> Memory trick: "East is least (subtract), west is best (add)" when going from map to compass.
+
+# gps | GPS and Phones | Use them wisely
+- Download offline maps before you leave. There may be no signal on the trail.
+- Batteries die, especially in cold weather. Carry a backup battery and keep the phone warm.
+- Always carry a paper map and compass as a backup and know how to use them.
+- Learn to read your coordinates so you can tell rescuers where you are.
+
+# natural-navigation | Natural Navigation | Find direction without a compass
+## The sun
+The sun rises in the east and sets in the west. At midday in the U.S. it is in the southern part of the sky.
+## Shadow stick
+1. Push a stick upright into the ground.
+2. Mark the tip of its shadow with a pebble.
+3. Wait 15 to 20 minutes and mark the new tip.
+4. A line from the first mark to the second runs roughly west to east.
+## North Star
+Find the Big Dipper. The two stars at the end of the cup point to Polaris, the North Star, about five times the distance between them. Polaris is almost exactly north.
+> Moss and tree growth are unreliable direction clues. Use them only as a last resort.
+
+# distance | Measuring Distance and Height | Pace counts and estimates
+## Pace
+A pace is two steps. Measure your pace by walking 100 feet and counting how many times your left foot hits the ground. Divide 100 by that number for your pace length.
+## Estimating height
+1. Have a buddy of known height stand next to a tree.
+2. Hold a pencil at arm's length and see how many "buddies" tall the tree is.
+3. Multiply by your buddy's height.
+> Keep a personal measurement list: your pace, your height, your hand span, and the width of your thumb.

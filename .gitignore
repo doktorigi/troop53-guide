@@ -1,0 +1,16 @@
+.gradle/
+**/build/
+local.properties
+*.iml
+.idea/
+dist/
+art/*-device.png
+art/*device.mp4
+**/__pycache__/
+*.keystore
+*.jks
+*.key
+*.pem
+.env
+.env.*
+!.env.example
