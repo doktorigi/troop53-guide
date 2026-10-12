@@ -4,7 +4,13 @@ final class GuideUITests: XCTestCase {
     private var app: XCUIApplication!
     override func setUpWithError() throws {
         continueAfterFailure = false
+        XCUIDevice.shared.orientation = .portrait
         app = XCUIApplication(); app.launchArguments = ["--ui-testing"]; app.launch()
+    }
+    override func tearDownWithError() throws { XCUIDevice.shared.orientation = .portrait }
+    private func waitUntilHittable(_ element: XCUIElement) {
+        let expectation = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in element.isHittable }, object: element)
+        XCTAssertEqual(XCTWaiter.wait(for: [expectation], timeout: 10), .completed)
     }
     private func capture(_ name: String) {
         let attachment = XCTAttachment(screenshot: app.screenshot()); attachment.name = name; attachment.lifetime = .keepAlways; add(attachment)
@@ -89,6 +95,7 @@ final class GuideUITests: XCTestCase {
         app.buttons["practice-image-knots/bowline-1.xml"].tap()
         XCTAssertTrue(app.buttons["close-illustration"].waitForExistence(timeout: 5))
         XCUIDevice.shared.orientation = .landscapeLeft
+        waitUntilHittable(app.buttons["Reset"])
         capture("10-landscape-viewer")
         XCTAssertTrue(app.buttons["Reset"].isHittable)
         app.buttons["Reset"].tap()
@@ -97,6 +104,7 @@ final class GuideUITests: XCTestCase {
         app.buttons["practice-next"].tap()
         XCTAssertEqual(app.staticTexts["practice-step"].label, "Step 2 of 5")
         XCUIDevice.shared.orientation = .portrait
+        waitUntilHittable(app.buttons["practice-next"])
         capture("11-rotated-practice")
     }
 }
