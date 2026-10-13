@@ -1,13 +1,15 @@
 # Troop 53 Scout Guide
 
-An offline Android and iOS field guide for the Scouts of Troop 53. **Built by Benjamin Doktor.**
+An offline Android and iOS field guide for the Scouts of Troop 53.
 
 The native iPhone/iPad app lives in [`ios/`](ios/README.md). Open `ios/Troop53Guide.xcodeproj` in Xcode; it uses SwiftUI and Apple frameworks, with the same guide text, quiz, and illustrations as Android. iOS 16 or newer is required. The [iOS workflow](https://github.com/doktorigi/troop53-guide/actions/workflows/ios.yml) builds and tests it on macOS; phone installation requires Apple signing through Xcode or TestFlight.
 
 - 15 sections, 100+ guides: Scout Basics (Oath, Law, motto, ranks, patrol method), First Aid (hurry cases, CPR, bleeding, burns, heat/cold, bites and stings…), Camping, Camp Cooking, Fire, Knots & Lashings, Navigation, Hiking, Survival, Weather & Nature, Water Safety, Woods Tools, Leave No Trace, Flag & Citizenship, Emergency Prep
 - Emergency card on the home screen: Call 911, Poison Control, Hurry cases, CPR, Bleeding
 - Search across every guide, save favorites with ☆, 40-question skills quiz (10 random per round)
-- No network permission; everything works on the trail
+- The guide works fully offline on the trail
+- **Open Scoutbook Plus** button (opens advancements.scouting.org in the browser)
+- **Troop Chat** (Android): group chats for approved troop members; see below
 
 Unofficial — not published or endorsed by Scouting America. First aid content is a quick reference, not a substitute for training.
 
@@ -25,6 +27,25 @@ gradlew.bat --offline testDebugUnitTest assembleDebug
 Debug APK: `dist/Troop53-Scout-Guide.apk`. Min SDK 26, target 34, plain Android views, no dependencies.
 
 For a fresh checkout, install JDK 17, Android SDK platform 34, and build-tools 34.0.0; set `ANDROID_HOME` to the SDK directory. Run `./gradlew testDebugUnitTest assembleDebug` on macOS/Linux or `gradlew.bat testDebugUnitTest assembleDebug` on Windows. Use `--offline` after Gradle dependencies are cached. GitHub Actions builds the APK and runs all unit tests on pushes to `main` and pull requests; download build artifacts from the workflow run.
+
+## Troop Chat (Android)
+
+Group chats backed by the free Firebase Spark plan (project `troop53-guide`): Firebase Auth email/password + Firestore, called over plain REST so the app keeps no third-party libraries.
+
+- Anyone with the app can sign up as a Scout or an Adult; a **leader must approve** each account before it can read or post.
+- Any approved member can create a group and add people. **Leaders can read every group.** There are no direct messages, and a two-person group can't pair one adult with one scout (Youth Protection). These rules are enforced server-side in [`firestore.rules`](firestore.rules), not just in the app.
+- New-message notifications come from a background check about every 15 minutes (instant push would need Cloud Functions on the paid plan). An open chat refreshes every 4 seconds.
+- Leaders approve members, promote other adults to leader, remove people, and delete any message (long-press) or group.
+
+Admin tasks need the Google Cloud CLI signed in as a project owner (`gcloud auth login`):
+
+```
+python tools/chat_rules.py deploy          # publish firestore.rules
+python tools/chat_rules.py check           # live allow/deny checks with throwaway accounts (cleans up after)
+python tools/chat_rules.py leader EMAIL    # make an account that signed up in the app a leader
+```
+
+`app/google-services.json` holds the Firebase project config; its API key identifies the project and is not a secret (access is enforced by the rules).
 
 ## Editing content
 

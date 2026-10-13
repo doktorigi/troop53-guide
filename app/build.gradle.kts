@@ -9,10 +9,15 @@ android {
         applicationId = "com.doktorigi.troop53"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.1.0"
         testInstrumentationRunner = "com.doktorigi.troop53.IllustrationChecks"
+        // Troop chat: Firebase web API key from google-services.json (identifies the project; rules enforce access).
+        val firebase = groovy.json.JsonSlurper().parse(file("google-services.json")) as Map<*, *>
+        val key = ((((firebase["client"] as List<*>)[0] as Map<*, *>)["api_key"] as List<*>)[0] as Map<*, *>)["current_key"]
+        buildConfigField("String", "FIREBASE_KEY", "\"$key\"")
     }
+    buildFeatures { buildConfig = true }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17

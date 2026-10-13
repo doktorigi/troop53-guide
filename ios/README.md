@@ -1,6 +1,6 @@
 # Troop 53 Scout Guide for iOS
 
-Native SwiftUI app for iPhone and iPad, iOS 16+. Built by Benjamin Doktor. All 15 sections, 113 articles, 40 quiz questions, 52 knot/lashing step diagrams, and 91 illustrations work offline. Search, saved guides, emergency shortcuts, the 10-question quiz, and Knot Practice match the Android app. There are no third-party runtime dependencies, accounts, analytics, or remote content.
+Native SwiftUI app for iPhone and iPad, iOS 16+. All 15 sections, 113 articles, 40 quiz questions, 52 knot/lashing step diagrams, and 91 illustrations work offline. Search, saved guides, emergency shortcuts, the 10-question quiz, and Knot Practice match the Android app. There are no third-party runtime dependencies, accounts, analytics, or remote content.
 
 ## Open and install
 
