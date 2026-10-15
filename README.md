@@ -9,7 +9,7 @@ The native iPhone/iPad app lives in [`ios/`](ios/README.md). Open `ios/Troop53Gu
 - Search across every guide, save favorites with ☆, 40-question skills quiz (10 random per round)
 - The guide works fully offline on the trail
 - **Open Scoutbook Plus** button (opens advancements.scouting.org in the browser)
-- **Troop Chat** (Android): group chats for approved troop members; see below
+- **Troop Chat** (Android and iOS): group chats for approved troop members; see below
 
 Unofficial — not published or endorsed by Scouting America. First aid content is a quick reference, not a substitute for training.
 
@@ -28,13 +28,13 @@ Debug APK: `dist/Troop53-Scout-Guide.apk`. Min SDK 26, target 34, plain Android 
 
 For a fresh checkout, install JDK 17, Android SDK platform 34, and build-tools 34.0.0; set `ANDROID_HOME` to the SDK directory. Run `./gradlew testDebugUnitTest assembleDebug` on macOS/Linux or `gradlew.bat testDebugUnitTest assembleDebug` on Windows. Use `--offline` after Gradle dependencies are cached. GitHub Actions builds the APK and runs all unit tests on pushes to `main` and pull requests; download build artifacts from the workflow run.
 
-## Troop Chat (Android)
+## Troop Chat (Android and iOS)
 
 Group chats backed by the free Firebase Spark plan (project `troop53-guide`): Firebase Auth email/password + Firestore, called over plain REST so the app keeps no third-party libraries.
 
 - Anyone with the app can sign up as a Scout or an Adult; a **leader must approve** each account before it can read or post.
 - Any approved member can create a group and add people. **Leaders can read every group.** There are no direct messages, and a two-person group can't pair one adult with one scout (Youth Protection). These rules are enforced server-side in [`firestore.rules`](firestore.rules), not just in the app.
-- New-message notifications come from a background check about every 15 minutes (instant push would need Cloud Functions on the paid plan). An open chat refreshes every 4 seconds.
+- New-message notifications come from a background check about every 15 minutes on Android, and from iOS Background App Refresh whenever iOS allows it (instant push would need Cloud Functions on the paid plan). An open chat refreshes every 4 seconds.
 - Leaders approve members, promote other adults to leader, remove people, and delete any message (long-press) or group.
 
 Admin tasks need the Google Cloud CLI signed in as a project owner (`gcloud auth login`):

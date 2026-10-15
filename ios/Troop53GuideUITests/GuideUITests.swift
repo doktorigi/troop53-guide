@@ -107,4 +107,16 @@ final class GuideUITests: XCTestCase {
         waitUntilHittable(app.buttons["practice-next"])
         capture("11-rotated-practice")
     }
+
+    func testChatOpensToSignInWithoutNetwork() {
+        let chat = app.buttons["chat-link"]
+        XCTAssertTrue(chat.waitForExistence(timeout: 10)); chat.tap()
+        let submit = app.buttons["chat-submit"]
+        XCTAssertTrue(submit.waitForExistence(timeout: 10))
+        XCTAssertEqual(submit.label, "Sign in")
+        app.buttons["chat-toggle"].tap()
+        XCTAssertEqual(submit.label, "Create account")
+        XCTAssertTrue(app.textFields["chat-name"].exists)
+        capture("12-chat-sign-up")
+    }
 }

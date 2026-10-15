@@ -1,9 +1,10 @@
 import SwiftUI
 
-enum GuideRoute: Hashable { case category(String), article(String), saved, quiz, about }
+enum GuideRoute: Hashable { case category(String), article(String), saved, quiz, about, chat, chatGroup(String), chatMembers }
 
 struct RootView: View {
     @EnvironmentObject private var store: GuideStore
+    @EnvironmentObject private var app: AppDelegate
     @State private var path: [GuideRoute] = []
     var body: some View {
         NavigationStack(path: $path) {
@@ -26,12 +27,20 @@ struct RootView: View {
                     case .saved: SavedView()
                     case .quiz: QuizView()
                     case .about: AboutView()
+                    case .chat: ChatView()
+                    case .chatGroup(let id): ChatGroupView(id: id)
+                    case .chatMembers: ChatMembersView()
                     }
                 }
                 .toolbar { ToolbarItem(placement: .navigationBarTrailing) {
                     Button { path = [] } label: { Image(systemName: "house") }.accessibilityLabel("Home").accessibilityIdentifier("home-button")
                 } }
             }
+        }
+        .onReceive(app.$openGroup) { id in
+            guard let id else { return }
+            path = [.chat, .chatGroup(id)]
+            app.openGroup = nil
         }
     }
 }
@@ -63,6 +72,7 @@ struct HomeView: View {
                     HStack {
                         NavigationLink(value: GuideRoute.saved) { Label("Saved", systemImage: "bookmark.fill").frame(maxWidth: .infinity) }.accessibilityIdentifier("saved-guides")
                         NavigationLink(value: GuideRoute.quiz) { Label("Quiz", systemImage: "questionmark.circle.fill").frame(maxWidth: .infinity) }.accessibilityIdentifier("quiz-link")
+                        NavigationLink(value: GuideRoute.chat) { Label("Chat", systemImage: "bubble.left.and.bubble.right.fill").frame(maxWidth: .infinity) }.accessibilityIdentifier("chat-link")
                     }.buttonStyle(.bordered)
                     Link(destination: URL(string: "https://advancements.scouting.org/")!) {
                         Label("Open Scoutbook Plus", systemImage: "arrow.up.right.square").frame(maxWidth: .infinity)

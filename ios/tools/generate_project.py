@@ -29,7 +29,7 @@ for target in targets:
     resource_refs = []; resource_builds = []
     if target == targets[0]:
         for name, path, typ in [
-            ('guide','../app/src/main/assets/guide','folder'), ('quiz','../app/src/main/assets/quiz.txt','text'),
+            ('guide','../app/src/main/assets/guide','folder'), ('quiz','../app/src/main/assets/quiz.txt','text'), ('firebase','../app/google-services.json','text.json'),
             ('Illustrations','Troop53Guide/Resources/Illustrations','folder'),
             ('Assets','Troop53Guide/Resources/Assets.xcassets','folder.assetcatalog'),
             ('Privacy','Troop53Guide/PrivacyInfo.xcprivacy','text.xml')]:
@@ -44,11 +44,11 @@ for target in targets:
     resourcephase = obj('resources:'+target,'PBXResourcesBuildPhase',buildActionMask='2147483647',files=resource_builds,runOnlyForDeploymentPostprocessing='0')
     configs=[]
     for configuration in ['Debug','Release']:
-        settings = dict(CODE_SIGN_STYLE='Automatic',CURRENT_PROJECT_VERSION='1',GENERATE_INFOPLIST_FILE='YES',
-                        IPHONEOS_DEPLOYMENT_TARGET='16.0',MARKETING_VERSION='1.0.0',SWIFT_VERSION='5.0',
+        settings = dict(CODE_SIGN_STYLE='Automatic',CURRENT_PROJECT_VERSION='2',GENERATE_INFOPLIST_FILE='YES',
+                        IPHONEOS_DEPLOYMENT_TARGET='16.0',MARKETING_VERSION='1.1.0',SWIFT_VERSION='5.0',
                         PRODUCT_NAME='$(TARGET_NAME)',TARGETED_DEVICE_FAMILY='1,2',SWIFT_EMIT_LOC_STRINGS='YES')
         if target == targets[0]:
-            settings.update(PRODUCT_BUNDLE_IDENTIFIER='com.doktorigi.troop53',ASSETCATALOG_COMPILER_APPICON_NAME='AppIcon',
+            settings.update(PRODUCT_BUNDLE_IDENTIFIER='com.doktorigi.troop53',INFOPLIST_FILE='Troop53Guide/Info.plist',ASSETCATALOG_COMPILER_APPICON_NAME='AppIcon',
                 INFOPLIST_KEY_CFBundleDisplayName='Troop 53 Guide', INFOPLIST_KEY_LSApplicationCategoryType='public.app-category.education',
                 INFOPLIST_KEY_UIApplicationSceneManifest_Generation='YES',INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents='YES',
                 INFOPLIST_KEY_UILaunchScreen_Generation='YES',INFOPLIST_KEY_UISupportedInterfaceOrientations='UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight',
