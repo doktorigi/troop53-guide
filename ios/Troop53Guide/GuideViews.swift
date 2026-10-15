@@ -1,9 +1,10 @@
 import SwiftUI
 
-enum GuideRoute: Hashable { case category(String), article(String), saved, quiz, about }
+enum GuideRoute: Hashable { case category(String), article(String), saved, quiz, about, chat, chatGroup(String), chatMembers }
 
 struct RootView: View {
     @EnvironmentObject private var store: GuideStore
+    @EnvironmentObject private var app: AppDelegate
     @State private var path: [GuideRoute] = []
     var body: some View {
         NavigationStack(path: $path) {
@@ -26,12 +27,20 @@ struct RootView: View {
                     case .saved: SavedView()
                     case .quiz: QuizView()
                     case .about: AboutView()
+                    case .chat: ChatView()
+                    case .chatGroup(let id): ChatGroupView(id: id)
+                    case .chatMembers: ChatMembersView()
                     }
                 }
                 .toolbar { ToolbarItem(placement: .navigationBarTrailing) {
                     Button { path = [] } label: { Image(systemName: "house") }.accessibilityLabel("Home").accessibilityIdentifier("home-button")
                 } }
             }
+        }
+        .onReceive(app.$openGroup) { id in
+            guard let id else { return }
+            path = [.chat, .chatGroup(id)]
+            app.openGroup = nil
         }
     }
 }
@@ -48,7 +57,6 @@ struct HomeView: View {
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Troop 53").font(.largeTitle.bold())
                         Text("Scout Guide").font(.title2)
-                        Text("Built by Benjamin Doktor").font(.caption).italic()
                     }
                 }
                 .foregroundStyle(TroopTheme.paper).frame(maxWidth: .infinity, alignment: .leading)
@@ -64,7 +72,11 @@ struct HomeView: View {
                     HStack {
                         NavigationLink(value: GuideRoute.saved) { Label("Saved", systemImage: "bookmark.fill").frame(maxWidth: .infinity) }.accessibilityIdentifier("saved-guides")
                         NavigationLink(value: GuideRoute.quiz) { Label("Quiz", systemImage: "questionmark.circle.fill").frame(maxWidth: .infinity) }.accessibilityIdentifier("quiz-link")
+                        NavigationLink(value: GuideRoute.chat) { Label("Chat", systemImage: "bubble.left.and.bubble.right.fill").frame(maxWidth: .infinity) }.accessibilityIdentifier("chat-link")
                     }.buttonStyle(.bordered)
+                    Link(destination: URL(string: "https://advancements.scouting.org/")!) {
+                        Label("Open Scoutbook Plus", systemImage: "arrow.up.right.square").frame(maxWidth: .infinity)
+                    }.buttonStyle(.borderedProminent).tint(TroopTheme.forest).accessibilityIdentifier("scoutbook-link")
                     Text("Field Guide").font(.title2.bold()).foregroundStyle(TroopTheme.forest)
                     LazyVGrid(columns: columns, alignment: .leading, spacing: 12) {
                         ForEach(store.guide.categories) { category in
@@ -162,7 +174,7 @@ struct ArticleView: View {
                 }.buttonStyle(.bordered)
                 ForEach(Array(article.blocks.enumerated()), id: \.offset) { _, block in BlockView(block: block) }
                 articleNavigation
-                Text("Troop 53 Scout Guide · Built by Benjamin Doktor").font(.caption).foregroundStyle(TroopTheme.muted).padding(.top)
+                Text("Troop 53 Scout Guide").font(.caption).foregroundStyle(TroopTheme.muted).padding(.top)
             }.padding(20).frame(maxWidth: 800).frame(maxWidth: .infinity)
         }
         .background(TroopTheme.paper).navigationTitle(article.title).navigationBarTitleDisplayMode(.inline).id(article.id)
@@ -282,7 +294,6 @@ struct FooterView: View {
         VStack(spacing: 8) {
             TroopEmblem().frame(width: 40, height: 46)
             Text("Troop 53 Scout Guide").font(.headline).foregroundStyle(TroopTheme.forest)
-            Text("Built by Benjamin Doktor").font(.caption).foregroundStyle(TroopTheme.muted)
             NavigationLink("About this app", value: GuideRoute.about)
         }.padding(.vertical, 20).frame(maxWidth: .infinity)
     }
@@ -295,7 +306,6 @@ struct AboutView: View {
             VStack(spacing: 18) {
                 TroopEmblem().frame(width: 120, height: 138)
                 Text("Troop 53 Scout Guide").font(.title.bold()).foregroundStyle(TroopTheme.forest)
-                Text("Built by Benjamin Doktor").font(.headline).foregroundStyle(TroopTheme.red)
                 Text("Version \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0.0") · \(store.guide.categories.count) sections · \(store.guide.articles.count) guides · \(store.questions.count) quiz questions").font(.caption).foregroundStyle(TroopTheme.muted)
                 VStack(alignment: .leading, spacing: 16) {
                     Text("A pocket field guide for the Scouts of Troop 53: first aid, the Scout Oath and Law, camping, cooking, knots, navigation, survival, and more. Everything works offline, so it is ready on the trail.")

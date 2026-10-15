@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1044686824284",
+    "project_id": "troop53-guide",
+    "storage_bucket": "troop53-guide.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044686824284:android:52f8cc797181bc6d115799",
+        "android_client_info": {
+          "package_name": "com.doktorigi.troop53"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOdAsvh-0eKMiBDjvwD7nBm8Kegjif3iA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -109,4 +109,18 @@ final class GuideTests: XCTestCase {
         store.toggleSaved("square-knot")
         XCTAssertEqual(GuideStore(defaults: defaults).saved, ["bowline"])
     }
+
+    func testChatDecodesFirestoreDocumentsAndErrors() {
+        let doc = FirestoreDoc(["name": "projects/p/databases/(default)/documents/groups/g1", "fields": [
+            "name": ["stringValue": "Eagle Patrol"], "members": Chat.enc(["a", "b"]), "createdBy": Chat.enc("a"),
+            "lastAt": ["timestampValue": "2026-10-12T03:04:05.123456Z"], "approved": Chat.enc(true)] as JSON])
+        XCTAssertEqual(doc.group, ChatGroup(id: "g1", name: "Eagle Patrol", members: ["a", "b"], createdBy: "a", lastAt: "2026-10-12T03:04:05.123456Z"))
+        XCTAssertTrue(doc.b("approved"))
+        XCTAssertFalse(doc.b("missing"))
+        XCTAssertEqual(chatDate("2026-10-12T03:04:05.123456Z"), chatDate("2026-10-12T03:04:05Z"))
+        XCTAssertEqual(chatDate("2026-10-12T03:04:05Z").timeIntervalSince1970, 1_791_774_245)
+        XCTAssertEqual(Chat.friendly(["error": ["message": "INVALID_LOGIN_CREDENTIALS"]]), "Wrong email or password.")
+        XCTAssertEqual(Chat.friendly([["error": ["message": "Missing or insufficient permissions."]]]), "Not allowed. Ask a troop leader.")
+        XCTAssertEqual(Chat.friendly(nil), "Something went wrong. Try again.")
+    }
 }

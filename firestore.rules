@@ -1,0 +1,70 @@
+rules_version = '2';
+
+// Troop chat security. The app is an untrusted client: everything that matters is enforced here.
+// Deploy: python tools/chat_rules.py deploy    Check against the live project: python tools/chat_rules.py check
+service cloud.firestore {
+  match /databases/{db}/documents {
+    function signedIn() { return request.auth != null; }
+    function user(uid) { return get(/databases/$(db)/documents/users/$(uid)).data; }
+    function approved() {
+      return signedIn() && exists(/databases/$(db)/documents/users/$(request.auth.uid)) && user(request.auth.uid).approved == true;
+    }
+    function leader() { return approved() && user(request.auth.uid).leader == true; }
+    function isMember(group) { return request.auth.uid in group.members; }
+    function validName(n) { return n is string && n.size() > 0 && n.size() <= 50; }
+    // Youth Protection: no one-on-one adult/scout chats. A two-person group must be two scouts or two adults.
+    function safeMembers(m) {
+      return m is list && m.size() >= 1 && m.size() <= 100
+        && (m.size() != 2 || user(m[0]).role == user(m[1]).role);
+    }
+
+    match /users/{uid} {
+      allow get: if signedIn() && (request.auth.uid == uid || approved());
+      allow list: if approved();
+      // New accounts always start unapproved; only a leader can approve.
+      allow create: if signedIn() && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['name', 'role', 'approved', 'leader'])
+        && validName(request.resource.data.name)
+        && request.resource.data.role in ['scout', 'adult']
+        && request.resource.data.approved == false
+        && request.resource.data.leader == false;
+      allow update: if leader()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['approved', 'leader'])
+        && (request.resource.data.leader == false || request.resource.data.role == 'adult');
+      allow delete: if leader() || request.auth.uid == uid;
+    }
+
+    match /groups/{gid} {
+      allow read: if approved() && (leader() || isMember(resource.data));
+      allow create: if approved()
+        && request.resource.data.keys().hasOnly(['name', 'members', 'createdBy', 'lastAt'])
+        && validName(request.resource.data.name)
+        && request.resource.data.createdBy == request.auth.uid
+        && isMember(request.resource.data)
+        && request.resource.data.lastAt == request.time
+        && safeMembers(request.resource.data.members);
+      allow update: if approved() && (leader() || isMember(resource.data)) && (
+        // posting a message bumps lastAt
+        (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['lastAt'])
+          && request.resource.data.lastAt == request.time)
+        // renaming, adding people, or leaving
+        || (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name', 'members'])
+          && validName(request.resource.data.name)
+          && safeMembers(request.resource.data.members)));
+      allow delete: if leader() || (approved() && resource.data.createdBy == request.auth.uid);
+
+      match /messages/{mid} {
+        function group() { return get(/databases/$(db)/documents/groups/$(gid)).data; }
+        allow read: if approved() && (leader() || isMember(group()));
+        allow create: if approved() && isMember(group())
+          && request.resource.data.keys().hasOnly(['uid', 'name', 'text', 'at'])
+          && request.resource.data.uid == request.auth.uid
+          && request.resource.data.name == user(request.auth.uid).name
+          && request.resource.data.text is string
+          && request.resource.data.text.size() > 0 && request.resource.data.text.size() <= 2000
+          && request.resource.data.at == request.time;
+        allow delete: if approved() && (leader() || resource.data.uid == request.auth.uid);
+      }
+    }
+  }
+}

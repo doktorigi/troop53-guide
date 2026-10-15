@@ -32,7 +32,7 @@ def svg_pdf(source,destination):
     root=ET.parse(source).getroot(); _,_,w,h=map(float,root.attrib['viewBox'].split())
     destination.parent.mkdir(parents=True,exist_ok=True)
     pdf=canvas.Canvas(str(destination),pagesize=(w,h),pageCompression=1,invariant=1)
-    pdf.setTitle('Troop 53 Scout Guide — '+source.stem); pdf.setAuthor('Benjamin Doktor')
+    pdf.setTitle('Troop 53 Scout Guide — '+source.stem)
     pdf.translate(0,h); pdf.scale(1,-1)
     for node in root:
         if node.tag.split('}')[-1]!='path': raise ValueError('Unexpected SVG element: '+node.tag)
