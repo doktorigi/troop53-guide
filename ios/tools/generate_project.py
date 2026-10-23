@@ -45,8 +45,8 @@ for target in targets:
     resourcephase = obj('resources:'+target,'PBXResourcesBuildPhase',buildActionMask='2147483647',files=resource_builds,runOnlyForDeploymentPostprocessing='0')
     configs=[]
     for configuration in ['Debug','Release']:
-        settings = dict(CODE_SIGN_STYLE='Automatic',CURRENT_PROJECT_VERSION='2',GENERATE_INFOPLIST_FILE='YES',
-                        IPHONEOS_DEPLOYMENT_TARGET='16.0',MARKETING_VERSION='1.1.0',SWIFT_VERSION='5.0',
+        settings = dict(CODE_SIGN_STYLE='Automatic',CURRENT_PROJECT_VERSION='3',GENERATE_INFOPLIST_FILE='YES',
+                        IPHONEOS_DEPLOYMENT_TARGET='16.0',MARKETING_VERSION='1.2.0',SWIFT_VERSION='5.0',
                         PRODUCT_NAME='$(TARGET_NAME)',TARGETED_DEVICE_FAMILY='1,2',SWIFT_EMIT_LOC_STRINGS='YES')
         if target == targets[0]:
             settings.update(PRODUCT_BUNDLE_IDENTIFIER='com.doktorigi.troop53',INFOPLIST_FILE='Troop53Guide/Info.plist',ASSETCATALOG_COMPILER_APPICON_NAME='AppIcon',
