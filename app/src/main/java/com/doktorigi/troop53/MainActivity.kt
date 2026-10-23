@@ -13,6 +13,7 @@ import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.RippleDrawable
+import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -80,8 +81,13 @@ class MainActivity : Activity() {
     private var quizAnswered: String? = null
     private var quizOptions: List<String> = emptyList()
 
+    private var intro: MediaPlayer? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Intro jingle once per cold launch, not on rotation or notification taps.
+        if (savedInstanceState == null && intent.getStringExtra("group") == null)
+            intro = MediaPlayer.create(this, R.raw.intro)?.apply { setOnCompletionListener { it.release(); intro = null }; start() }
         val files = assets.list("guide")!!.sorted()
         guide = Guide(files.flatMap { f -> GuideParser.parse(assets.open("guide/$f").bufferedReader().readText()) })
         questions = GuideParser.parseQuiz(assets.open("quiz.txt").bufferedReader().readText())
@@ -95,6 +101,7 @@ class MainActivity : Activity() {
 
     override fun onPause() { super.onPause(); paused = true }
     override fun onResume() { super.onResume(); paused = false }
+    override fun onStop() { super.onStop(); intro?.release(); intro = null }
 
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {

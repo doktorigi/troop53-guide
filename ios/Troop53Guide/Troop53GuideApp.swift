@@ -1,3 +1,4 @@
+import AVFoundation
 import BackgroundTasks
 import SwiftUI
 import UserNotifications
@@ -11,7 +12,7 @@ struct Troop53GuideApp: App {
         WindowGroup {
             RootView().environmentObject(store).tint(TroopTheme.forest).preferredColorScheme(.light)
         }
-        .onChange(of: phase) { if $0 == .background { ChatNotifier.schedule() } }
+        .onChange(of: phase) { if $0 == .background { app.stopIntro(); ChatNotifier.schedule() } }
         .backgroundTask(.appRefresh(ChatNotifier.task)) {
             await ChatNotifier.check()
             ChatNotifier.schedule()
@@ -22,8 +23,15 @@ struct Troop53GuideApp: App {
 /// Opens the right group when a chat notification is tapped.
 final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate, ObservableObject {
     @Published var openGroup: String?
+    private var intro: AVAudioPlayer?
+    func stopIntro() { intro?.stop() }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         UNUserNotificationCenter.current().delegate = self
+        // Intro jingle once per cold launch; default ambient session respects the silent switch.
+        if let url = Bundle.main.url(forResource: "intro", withExtension: "mp3") {
+            intro = try? AVAudioPlayer(contentsOf: url)
+            intro?.play()
+        }
         return true
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
