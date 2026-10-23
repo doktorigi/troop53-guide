@@ -32,7 +32,8 @@ for target in targets:
             ('guide','../app/src/main/assets/guide','folder'), ('quiz','../app/src/main/assets/quiz.txt','text'), ('firebase','../app/google-services.json','text.json'),
             ('Illustrations','Troop53Guide/Resources/Illustrations','folder'),
             ('Assets','Troop53Guide/Resources/Assets.xcassets','folder.assetcatalog'),
-            ('Privacy','Troop53Guide/PrivacyInfo.xcprivacy','text.xml')]:
+            ('Privacy','Troop53Guide/PrivacyInfo.xcprivacy','text.xml'),
+            ('intro','Troop53Guide/Resources/intro.mp3','audio.mp3')]:
             fileid = obj('resource:'+name,'PBXFileReference',lastKnownFileType=typ,path=path,sourceTree='SOURCE_ROOT')
             resource_refs.append(fileid); resource_builds.append(obj('resourcebuild:'+name,'PBXBuildFile',fileRef=fileid))
     filegroups.append(obj('group:'+target,'PBXGroup',children=source_refs+resource_refs,path=target,sourceTree='<group>'))
