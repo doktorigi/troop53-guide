@@ -95,4 +95,4 @@ The runner opens the app on its home screen and reports `PASS` or `FAIL`. `art/d
 
     python tools/build_web.py --serve   # builds build/web and serves http://localhost:8053
 
-Deploy by uploading `build/web` to any static host.
+Live at https://doktorigi.github.io/troop53-guide/ — `.github/workflows/web.yml` rebuilds and deploys it on every merge to main that touches the content, art, or `web/`.
