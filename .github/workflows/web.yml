@@ -1,0 +1,26 @@
+name: Web (PWA)
+on:
+  push:
+    branches: [main]
+    paths: [web/**, app/src/main/assets/**, art/svg/**, tools/build_web.py, .github/workflows/web.yml]
+  pull_request:
+    paths: [web/**, app/src/main/assets/**, art/svg/**, tools/build_web.py, .github/workflows/web.yml]
+  workflow_dispatch:
+permissions: { contents: read, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: false }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: python3 tools/build_web.py
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: build/web }
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4

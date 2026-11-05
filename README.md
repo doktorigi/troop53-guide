@@ -88,3 +88,11 @@ adb shell am instrument -w com.doktorigi.troop53.test/com.doktorigi.troop53.Illu
 ```
 
 The runner opens the app on its home screen and reports `PASS` or `FAIL`. `art/device_review.py` provides additional screenshot checks; set `ANDROID_SERIAL` to the connected test phone when multiple devices are connected. It uses `adb` on PATH or from `ANDROID_HOME` / `ANDROID_SDK_ROOT`; `ADB` can specify an executable explicitly. `art/preview/` outputs stay local.
+
+## Web edition (PWA)
+
+`web/` is a no-install version for phones and browsers: same guide text, quiz, and SVG artwork, works offline after the first visit, and can be added to the home screen. Troop Chat is app-only.
+
+    python tools/build_web.py --serve   # builds build/web and serves http://localhost:8053
+
+Live at https://doktorigi.github.io/troop53-guide/ — `.github/workflows/web.yml` rebuilds and deploys it on every merge to main that touches the content, art, or `web/`.
